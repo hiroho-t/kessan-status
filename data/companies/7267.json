@@ -1,0 +1,40 @@
+{
+  "code": "7267",
+  "edinet_code": "E02166",
+  "name": "本田技研工業",
+  "yomi": "ホンダギケンコウギョウ",
+  "en_name": "HONDA MOTOR CO., LTD.",
+  "industry": "輸送用機器",
+  "url": "https://global.honda/jp/",
+  "period": "2026年3月期",
+  "standard": "IFRS",
+  "revenue": 21796610,
+  "revenue_prev": 21688767,
+  "growth": 0.5,
+  "growth_prev": 6.2,
+  "op": -414346,
+  "op_prev": 1213486,
+  "net_income": -423941,
+  "net_income_prev": 835837,
+  "equity_ratio": 35.3,
+  "equity_ratio_prev": 40.1,
+  "cash": 5118477,
+  "cash_prev": 4528795,
+  "damages": [
+    "EV戦略の見直しによる損失　営業利益 −1兆4,536億円"
+  ],
+  "forecast": {
+    "revenue": 23150000,
+    "growth": 6.2,
+    "op": 500000,
+    "op_growth": null
+  },
+  "notes": [
+    "自動車ローンなどの金融事業を持つため、防御力とHPは低めに出る。",
+    "次の期も、EV関連の損失を −5,000億円見込んでいる（会社の予想）。"
+  ],
+  "source_url": "https://data.swcms.net/file/honda-ir/dam/jcr:eec4b62c-e0ac-4ac7-904f-2d57261c6f75/140120260513531560.pdf",
+  "source_title": "本田技研工業 2026年3月期 決算短信〔IFRS〕（連結）2026年5月14日",
+  "source_kind": "決算短信",
+  "fetched_at": "2026-09-13"
+}

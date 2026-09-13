@@ -1,0 +1,108 @@
+:root { --ink:#111; --sub:#666; --line:#ddd; --bar:#eee; --hover:#f4f4f4; --muted:#aaa; }
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:#fff; color:var(--ink); font-family:"Noto Sans JP",sans-serif; line-height:1.7; overflow-wrap:anywhere; }
+a { color:var(--ink); }
+[hidden] { display:none !important; }
+.wrap { width:100%; max-width:1200px; margin:0 auto; padding-left:clamp(16px,4vw,40px); padding-right:clamp(16px,4vw,40px); }
+.num { font-variant-numeric:tabular-nums; }
+.note { font-size:12px; color:var(--sub); }
+
+.site-head { border-bottom:2px solid var(--ink); }
+.head-inner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 24px; padding-top:14px; padding-bottom:14px; }
+.brand { font-weight:700; font-size:18px; text-decoration:none; white-space:nowrap; }
+.nav { display:flex; flex-wrap:wrap; gap:4px 20px; font-size:14px; }
+.nav a { text-decoration:none; white-space:nowrap; }
+.nav i { margin-right:6px; }
+main.wrap { padding-top:clamp(24px,4vw,48px); padding-bottom:clamp(48px,6vw,96px); }
+
+.site-foot { border-top:2px solid var(--ink); padding:24px 0 32px; }
+.foot-nav { display:flex; flex-wrap:wrap; gap:8px 24px; margin-bottom:12px; font-size:14px; }
+.site-foot p { margin:0 0 6px; color:var(--sub); font-size:12px; }
+
+h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
+.hero p { margin:0 0 6px; max-width:760px; }
+.section { margin-top:clamp(36px,5vw,64px); }
+.section > h2 { font-size:18px; margin:0 0 12px; }
+.crumb { font-size:13px; color:var(--sub); margin-bottom:16px; }
+
+.search { display:flex; align-items:center; gap:10px; border:2px solid var(--ink); padding:0 14px; max-width:640px; }
+.search input { flex:1; min-width:0; border:0; outline:0; font:inherit; font-size:16px; padding:12px 0; background:transparent; color:var(--ink); }
+.search:focus-within { outline:2px solid var(--ink); outline-offset:2px; }
+#count { margin:8px 0 12px; min-height:1em; }
+
+.ind-grid { list-style:none; margin:0 0 12px; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:8px; }
+.ind-grid a, .ind-grid .empty { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border:1px solid var(--ink); padding:10px 14px; text-decoration:none; height:100%; }
+.ind-grid a:hover { background:var(--hover); }
+.ind-grid .empty { border-color:var(--line); color:var(--muted); }
+.ind-grid small { font-size:12px; color:var(--sub); white-space:nowrap; }
+
+/* 一覧（業界ページと検索結果） */
+.list { border:2px solid var(--ink); }
+.list-head, .item { display:grid; grid-template-columns:minmax(0,2.6fr) repeat(5,minmax(0,1fr)) minmax(0,1.6fr); gap:8px 12px; padding:12px 16px; align-items:center; }
+.list-head { font-size:12px; font-weight:700; border-bottom:2px solid var(--ink); align-items:end; }
+.list-head small { display:block; font-weight:400; color:var(--sub); font-size:11px; }
+.list-head i { margin-right:4px; }
+.list-head span:nth-child(n+2):nth-child(-n+6), .c-stat { text-align:right; }
+.item { color:inherit; text-decoration:none; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; }
+.item:last-child { border-bottom:none; }
+.item:hover { background:var(--hover); }
+.c-name b { display:block; }
+.c-name small { font-size:12px; color:var(--sub); }
+.c-stat { font-size:15px; }
+.c-ail { font-size:13px; }
+.c-stat em, .c-ail em { display:none; font-style:normal; }
+
+@media (max-width:767px) {
+  .list-head { display:none; }
+  .item { grid-template-columns:repeat(3,minmax(0,1fr)); row-gap:8px; padding:14px 16px; }
+  .c-name, .c-ail { grid-column:1 / -1; }
+  .c-stat { text-align:left; }
+  .c-stat em { display:block; font-size:11px; color:var(--sub); }
+  .c-ail em { display:inline; font-size:11px; color:var(--sub); margin-right:8px; }
+}
+
+/* 会社のページ */
+.company { display:grid; gap:16px; grid-template-columns:minmax(0,1fr); }
+@media (min-width:960px) { .company { grid-template-columns:minmax(0,3fr) minmax(0,2fr); align-items:start; } }
+.col-main, .col-side { display:grid; gap:16px; align-content:start; }
+.card { border:2px solid var(--ink); padding:clamp(16px,3vw,24px); }
+.head-top { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 12px; }
+.name { font-size:clamp(20px,3vw,26px); margin:0; }
+.lv { font-size:28px; font-weight:700; white-space:nowrap; }
+.lv small { font-size:13px; font-weight:500; margin-right:4px; }
+.url { font-size:13px; margin-top:4px; }
+.meta { color:var(--sub); font-size:13px; margin-top:4px; }
+.meta span { display:inline-block; }
+.meta span + span::before { content:"／"; }
+.stats { padding-top:6px; padding-bottom:6px; }
+.stat { padding:14px 0; border-bottom:1px solid var(--line); }
+.stat:last-child { border-bottom:none; }
+.row { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 12px; }
+.label { font-weight:700; font-size:16px; }
+.label i { width:1.3em; text-align:center; margin-right:6px; }
+.label em { font-style:normal; font-weight:400; font-size:12px; color:var(--sub); margin-left:8px; }
+.val { font-size:22px; font-weight:700; white-space:nowrap; margin-left:auto; }
+.diff { font-size:13px; color:var(--sub); margin-left:8px; font-weight:400; }
+.bar { height:10px; background:var(--bar); margin:6px 0 4px; }
+.bar i { display:block; height:100%; background:var(--ink); }
+.box h2 { font-size:14px; margin:0 0 6px; }
+.box p { margin:0 0 4px; font-size:14px; }
+.box p.note { font-size:12px; margin-top:8px; }
+@media (max-width:420px) {
+  .label em { display:block; margin-left:0; }
+  .val { font-size:20px; }
+  .diff { display:block; text-align:right; margin-left:0; }
+}
+
+/* 数字の考え方 */
+.prose { max-width:760px; line-height:2; }
+.prose h1 { margin-bottom:16px; }
+.prose h2 { font-size:18px; line-height:1.6; margin:48px 0 12px; padding-top:20px; border-top:2px solid var(--ink); }
+.prose h2 i { margin-right:8px; }
+.prose p { margin:0 0 16px; }
+.prose .formula { border:1px solid var(--ink); padding:12px 16px; font-weight:700; line-height:1.8; }
+.prose .scroll { overflow-x:auto; margin:0 0 16px; }
+.prose table { border-collapse:collapse; font-size:14px; line-height:1.7; }
+.prose th, .prose td { border-bottom:1px solid var(--line); padding:8px 24px 8px 0; text-align:left; vertical-align:top; }
+.prose th { font-size:12px; border-bottom:2px solid var(--ink); white-space:nowrap; }

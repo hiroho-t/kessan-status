@@ -1,0 +1,36 @@
+{
+  "code": "7261",
+  "edinet_code": "E02163",
+  "name": "マツダ",
+  "yomi": "マツダ",
+  "en_name": "Mazda Motor Corporation",
+  "industry": "輸送用機器",
+  "url": "https://www.mazda.com/ja/",
+  "period": "2026年3月期",
+  "standard": "JGAAP",
+  "revenue": 4918172,
+  "revenue_prev": 5018893,
+  "growth": -2.0,
+  "growth_prev": 4.0,
+  "op": 51579,
+  "op_prev": 186125,
+  "net_income": 35086,
+  "net_income_prev": 114079,
+  "equity_ratio": 42.5,
+  "equity_ratio_prev": 43.8,
+  "cash": 1293162,
+  "cash_prev": 1105585,
+  "damages": [
+    "米国の関税　営業利益 −1,549億円"
+  ],
+  "forecast": {
+    "revenue": 5500000,
+    "growth": 11.8,
+    "op": 150000,
+    "op_growth": 190.8
+  },
+  "source_url": "https://www.mazda.com/content/dam/mazda/corporate/mazda-com/ja/pdf/investors/library/result/2026/result20260512_j.pdf",
+  "source_title": "マツダ 2026年3月期 決算短信〔日本基準〕（連結）2026年5月12日",
+  "source_kind": "決算短信",
+  "fetched_at": "2026-09-13"
+}

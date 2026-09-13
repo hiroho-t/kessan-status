@@ -3,81 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>決算ステータス｜自動車</title>
+<title>決算ステータス</title>
+<meta name="description" content="上場企業の決算を、規模Lv・攻撃力・防御力・素早さ・HPで見せるサイトです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-  :root { --ink:#111; --sub:#666; --line:#ddd; --bar:#eee; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:#fff; color:var(--ink); font-family:"Noto Sans JP",sans-serif; line-height:1.7; }
-  .wrap { max-width:640px; margin:0 auto; padding:40px 20px 60px; }
-  .num { font-variant-numeric:tabular-nums; }
-  .back { font-size:13px; margin-bottom:12px; }
-  .back a, .url a { color:var(--ink); }
-
-  .head { border:2px solid var(--ink); padding:20px 24px; }
-  .head-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
-  .name { font-size:24px; font-weight:700; margin:0; }
-  .lv { font-size:28px; font-weight:700; }
-  .lv small { font-size:14px; font-weight:500; margin-right:4px; }
-  .meta { color:var(--sub); font-size:13px; margin-top:4px; }
-  .url { font-size:13px; margin-top:2px; }
-  .label i { width:1.3em; text-align:center; margin-right:6px; }
-  .meta span + span::before { content:"／"; }
-
-  .stats { border:2px solid var(--ink); border-top:none; padding:8px 24px 16px; }
-  .stat { padding:14px 0; border-bottom:1px solid var(--line); }
-  .stat:last-child { border-bottom:none; }
-  .row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
-  .label { font-weight:700; font-size:16px; }
-  .label em { font-style:normal; font-weight:400; font-size:12px; color:var(--sub); margin-left:8px; }
-  .val { font-size:22px; font-weight:700; white-space:nowrap; }
-  .diff { font-size:13px; color:var(--sub); margin-left:8px; font-weight:400; }
-  .bar { height:10px; background:var(--bar); margin:6px 0 4px; }
-  .bar i { display:block; height:100%; background:var(--ink); }
-  .note { font-size:12px; color:var(--sub); }
-
-  .box { border:2px solid var(--ink); border-top:none; padding:16px 24px; }
-  .box h2 { font-size:14px; margin:0 0 6px; }
-  .box p { margin:0; font-size:14px; }
-
-  .foot { margin-top:28px; font-size:12px; color:var(--sub); }
-  .foot p { margin:0 0 8px; }
-  .foot a { color:var(--sub); }
-
-  table { width:100%; border-collapse:collapse; border:2px solid var(--ink); font-size:14px; }
-  th, td { padding:10px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
-  th:first-child, td:first-child { text-align:left; }
-  th { font-size:12px; font-weight:700; }
-  th i { margin-right:4px; }
-  th small { display:block; font-size:11px; font-weight:400; color:var(--sub); }
-  th { vertical-align:bottom; }
-  td a { color:var(--ink); font-weight:700; }
-  .scroll { overflow-x:auto; }
-  h1.page { font-size:22px; margin:0 0 4px; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-
-  <h1 class="page">決算ステータス　自動車</h1>
-  <p class="note" style="margin:0 0 16px">2026年3月期の決算短信（連結）から。売上の大きい順</p>
-  <div class="scroll">
-  <table>
-    <thead><tr><th>会社</th><th>規模Lv<small>売上の大きさ</small></th><th><i class="fa-solid fa-hand-fist"></i>攻撃力<small>稼ぐ力</small></th><th><i class="fa-solid fa-shield-halved"></i>防御力<small>倒れにくさ</small></th><th><i class="fa-solid fa-bolt"></i>素早さ<small>伸びる速さ</small></th><th><i class="fa-solid fa-heart"></i>HP<small>現金で何か月もつか</small></th><th>状態異常<small>赤字・債務超過</small></th></tr></thead>
-    <tbody><tr><td><a href="トヨタ.html">トヨタ自動車</a></td><td class="num">92</td><td class="num">37</td><td class="num">38</td><td class="num">78</td><td class="num">3.2か月</td><td>なし</td></tr><tr><td><a href="ホンダ.html">本田技研工業</a></td><td class="num">86</td><td class="num">0</td><td class="num">35</td><td class="num">53</td><td class="num">2.8か月</td><td>営業赤字、最終赤字</td></tr><tr><td><a href="日産.html">日産自動車</a></td><td class="num">82</td><td class="num">2</td><td class="num">24</td><td class="num">26</td><td class="num">2.3か月</td><td>最終赤字</td></tr><tr><td><a href="スズキ.html">スズキ</a></td><td class="num">77</td><td class="num">49</td><td class="num">51</td><td class="num">90</td><td class="num">2.1か月</td><td>なし</td></tr><tr><td><a href="マツダ.html">マツダ</a></td><td class="num">76</td><td class="num">5</td><td class="num">43</td><td class="num">40</td><td class="num">3.2か月</td><td>なし</td></tr></tbody>
-  </table>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">決算ステータス</a>
+    <nav class="nav">
+      <a href="index.html#search"><i class="fa-solid fa-magnifying-glass"></i>検索</a>
+      <a href="index.html#industries"><i class="fa-solid fa-table-list"></i>業界一覧</a>
+      <a href="about.html"><i class="fa-solid fa-calculator"></i>数字の考え方</a>
+    </nav>
   </div>
-  <div class="foot">
-    <p><strong>数字の変え方（仮）</strong><br>
-    規模Lv＝1＋log10(売上高・億円)×16（売上1億円でLv.1、1兆円でLv.65、上限99）。会社の大きさだけを表し、経営の良し悪しは表さない<br>
-    攻撃力＝営業利益率×5（20%で100）／防御力＝自己資本の比率そのまま（100%で100）<br>
-    素早さ＝50＋売上の伸び率×5（伸び0%で50、+10%で100）／HP＝現金÷（営業収益−営業利益）の1か月分。バーは12か月で満タン<br>
-    ステータスは0〜100で止める。式は会計の専門家の確認前。</p>
-    <p>この画面は会社の状態を知るためのもので、株の売買をすすめるものではない。</p>
-  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+  <h1>決算ステータス</h1>
+  <p>上場企業の決算を、ゲームのステータスの形で見せるサイトです。決算書を読まなくても、会社の大きさや稼ぐ力を比べられます。</p>
+  <p class="note">掲載 5社（2026年9月13日更新）。ステータスの意味は<a href="about.html">数字の考え方</a>に書いています。</p>
+</section>
 
-</div>
+<section id="search" class="section">
+  <h2>会社を探す</h2>
+  <label class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input id="q" type="search" placeholder="社名・よみがな・証券コード" autocomplete="off" aria-label="社名・よみがな・証券コードで探す">
+  </label>
+  <p id="count" class="note" aria-live="polite"></p>
+  <div id="results" class="list" hidden></div>
+  <template id="list-head"><div class="list-head" aria-hidden="true">
+    <span>会社</span>
+    <span>規模Lv<small>売上の大きさ</small></span>
+    <span><i class="fa-solid fa-hand-fist"></i>攻撃力<small>稼ぐ力</small></span>
+    <span><i class="fa-solid fa-shield-halved"></i>防御力<small>倒れにくさ</small></span>
+    <span><i class="fa-solid fa-bolt"></i>素早さ<small>伸びる速さ</small></span>
+    <span><i class="fa-solid fa-heart"></i>HP<small>現金で何か月もつか</small></span>
+    <span>状態異常<small>赤字・債務超過</small></span>
+  </div></template>
+</section>
+
+<section id="industries" class="section">
+  <h2>業界一覧</h2>
+  <ul class="ind-grid">
+    <li><span class="empty"><span>水産・農林業</span><small>準備中</small></span></li><li><span class="empty"><span>鉱業</span><small>準備中</small></span></li><li><span class="empty"><span>建設業</span><small>準備中</small></span></li><li><span class="empty"><span>食料品</span><small>準備中</small></span></li><li><span class="empty"><span>繊維製品</span><small>準備中</small></span></li><li><span class="empty"><span>パルプ・紙</span><small>準備中</small></span></li><li><span class="empty"><span>化学</span><small>準備中</small></span></li><li><span class="empty"><span>医薬品</span><small>準備中</small></span></li><li><span class="empty"><span>石油・石炭製品</span><small>準備中</small></span></li><li><span class="empty"><span>ゴム製品</span><small>準備中</small></span></li><li><span class="empty"><span>ガラス・土石製品</span><small>準備中</small></span></li><li><span class="empty"><span>鉄鋼</span><small>準備中</small></span></li><li><span class="empty"><span>非鉄金属</span><small>準備中</small></span></li><li><span class="empty"><span>金属製品</span><small>準備中</small></span></li><li><span class="empty"><span>機械</span><small>準備中</small></span></li><li><span class="empty"><span>電気機器</span><small>準備中</small></span></li><li><a href="industry/輸送用機器.html"><span>輸送用機器</span><small>5社</small></a></li><li><span class="empty"><span>精密機器</span><small>準備中</small></span></li><li><span class="empty"><span>その他製品</span><small>準備中</small></span></li><li><span class="empty"><span>電気・ガス業</span><small>準備中</small></span></li><li><span class="empty"><span>陸運業</span><small>準備中</small></span></li><li><span class="empty"><span>海運業</span><small>準備中</small></span></li><li><span class="empty"><span>空運業</span><small>準備中</small></span></li><li><span class="empty"><span>倉庫・運輸関連</span><small>準備中</small></span></li><li><span class="empty"><span>情報・通信業</span><small>準備中</small></span></li><li><span class="empty"><span>卸売業</span><small>準備中</small></span></li><li><span class="empty"><span>小売業</span><small>準備中</small></span></li><li><span class="empty"><span>不動産業</span><small>準備中</small></span></li><li><span class="empty"><span>サービス業</span><small>準備中</small></span></li>
+  </ul>
+  <p class="note">銀行業、証券・商品先物取引業、保険業、その他金融業は、売上や営業利益の考え方がほかの業種とちがうため、まだ載せていません。</p>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-nav">
+      <a href="index.html#industries">業界一覧</a>
+      <a href="about.html">数字の考え方</a>
+      <a href="https://startwith.org/" target="_blank" rel="noopener">運用会社</a>
+    </nav>
+    <p>このサイトは、会社の状態を知るためのものです。株の売買をすすめるものではありません。</p>
+    <p class="copy">© StartWith</p>
+  </div>
+</footer>
+<script src="search-index.js"></script>
+<script>
+(function () {
+  var data = window.KESSAN_INDEX || [];
+  var q = document.getElementById('q');
+  var out = document.getElementById('results');
+  var count = document.getElementById('count');
+  var head = document.getElementById('list-head');
+
+  function norm(s) {
+    s = String(s || '').normalize('NFKC').toLowerCase().replace(/\s+/g, '').replace(/株式会社|\(株\)/g, '');
+    return s.replace(/[\u30a1-\u30f6]/g, function (ch) { return String.fromCharCode(ch.charCodeAt(0) - 0x60); });
+  }
+  data.forEach(function (d) { d.key = norm([d.name, d.yomi, d.en, d.code, d.industry].join('|')); });
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function cell(cls, label, value) {
+    var s = el('span', cls);
+    s.appendChild(el('em', null, label));
+    s.appendChild(document.createTextNode(value));
+    return s;
+  }
+
+  function render() {
+    var v = norm(q.value);
+    out.textContent = '';
+    if (!v) { out.hidden = true; count.textContent = ''; return; }
+    var hits = data.filter(function (d) { return d.key.indexOf(v) >= 0; })
+      .sort(function (a, b) { return b.lv - a.lv || b.rev - a.rev; });
+    if (!hits.length) { out.hidden = true; count.textContent = '見つかりませんでした'; return; }
+    count.textContent = hits.length + '社見つかりました' + (hits.length > 50 ? '（規模Lvが高い50社を表示）' : '');
+    out.appendChild(head.content.cloneNode(true));
+    hits.slice(0, 50).forEach(function (d) {
+      var a = el('a', 'item');
+      a.href = 'company/' + d.code + '.html';
+      var n = el('span', 'c-name');
+      n.appendChild(el('b', null, d.name));
+      n.appendChild(el('small', null, d.code + '　' + d.industry));
+      a.appendChild(n);
+      a.appendChild(cell('c-stat', '規模Lv', d.lv));
+      a.appendChild(cell('c-stat', '攻撃力', d.atk));
+      a.appendChild(cell('c-stat', '防御力', d.dfn));
+      a.appendChild(cell('c-stat', '素早さ', d.spd));
+      a.appendChild(cell('c-stat', 'HP', d.hp + 'か月'));
+      a.appendChild(cell('c-ail', '状態異常', d.ail));
+      out.appendChild(a);
+    });
+    out.hidden = false;
+  }
+
+  q.addEventListener('input', render);
+  var init = new URLSearchParams(location.search).get('q');
+  if (init) { q.value = init; render(); }
+})();
+</script>
 </body>
 </html>

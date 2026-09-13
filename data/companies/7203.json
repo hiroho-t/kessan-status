@@ -1,0 +1,40 @@
+{
+  "code": "7203",
+  "edinet_code": "E02144",
+  "name": "トヨタ自動車",
+  "yomi": "トヨタジドウシャ",
+  "en_name": "TOYOTA MOTOR CORPORATION",
+  "industry": "輸送用機器",
+  "url": "https://global.toyota/jp/",
+  "period": "2026年3月期",
+  "standard": "IFRS",
+  "revenue": 50684952,
+  "revenue_prev": 48036704,
+  "growth": 5.5,
+  "growth_prev": 6.5,
+  "op": 3766216,
+  "op_prev": 4795586,
+  "net_income": 3848098,
+  "net_income_prev": 4765086,
+  "equity_ratio": 37.8,
+  "equity_ratio_prev": 38.4,
+  "cash": 12659622,
+  "cash_prev": 8982404,
+  "highlight": "過去最高",
+  "damages": [
+    "米国の関税　営業利益 −1兆3,800億円"
+  ],
+  "forecast": {
+    "revenue": 51000000,
+    "growth": 0.6,
+    "op": 3000000,
+    "op_growth": -20.3
+  },
+  "notes": [
+    "自動車ローンなどの金融事業を持つため、防御力とHPは低めに出る。"
+  ],
+  "source_url": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260508/20260506517369.pdf",
+  "source_title": "トヨタ自動車 2026年3月期 決算短信〔IFRS〕（連結）2026年5月8日",
+  "source_kind": "決算短信",
+  "fetched_at": "2026-09-13"
+}

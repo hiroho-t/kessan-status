@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数字の考え方｜決算ステータス</title>
+<meta name="description" content="決算ステータスの規模Lv・攻撃力・防御力・素早さ・HPを、どの数字からどんな式で出しているかを説明します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">決算ステータス</a>
+    <nav class="nav">
+      <a href="index.html#search"><i class="fa-solid fa-magnifying-glass"></i>検索</a>
+      <a href="index.html#industries"><i class="fa-solid fa-table-list"></i>業界一覧</a>
+      <a href="about.html"><i class="fa-solid fa-calculator"></i>数字の考え方</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<nav class="crumb"><a href="index.html">トップ</a> / 数字の考え方</nav>
+<article class="prose">
+<h1>数字の考え方</h1>
+<p>「決算ステータス」は、会社の決算の数字を、ゲームのステータスの形に置きかえて見せるサイトです。</p>
+<p>このページでは、それぞれのステータスを、どの数字から、どんな式で出しているかを説明します。</p>
+
+<h2><i class="fa-solid fa-file-lines"></i>使っている数字</h2>
+<p>数字は、会社が出している決算短信と、有価証券報告書から取っています。まとめサイトの数字は、使いません。</p>
+<p>子会社をふくめた、グループ全体の数字（連結）を使います。子会社がない会社だけは、その会社1社の数字（個別）を使います。</p>
+
+<h2>規模Lv（売上の大きさ）</h2>
+<p>規模Lvは、1年間の売上高の大きさだけを表します。経営がうまいかどうかは、表しません。</p>
+<p class="formula">規模Lv ＝ 1 ＋ log10（売上高を億円で表した数）× 16</p>
+<p>売上高が10倍になると、規模Lvが16上がります。上限は99です。</p>
+<div class="scroll"><table>
+<thead><tr><th>売上高</th><th>規模Lv</th></tr></thead>
+<tbody>
+<tr><td>1億円</td><td>1</td></tr>
+<tr><td>10億円</td><td>17</td></tr>
+<tr><td>100億円</td><td>33</td></tr>
+<tr><td>1,000億円</td><td>49</td></tr>
+<tr><td>1兆円</td><td>65</td></tr>
+<tr><td>10兆円</td><td>81</td></tr>
+</tbody></table></div>
+<p>売上高は、会社によって1万倍以上ちがいます。そのまま点数にすると、ほとんどの会社が0に近くなるため、桁の数で比べています。</p>
+
+<h2><i class="fa-solid fa-hand-fist"></i>攻撃力（稼ぐ力）</h2>
+<p>攻撃力は、本業でどれだけもうけを出しているかを表します。</p>
+<p>使う数字は、営業利益率です。営業利益率は、売上高のうち、本業のもうけ（営業利益）が何％あるかを表します。</p>
+<p class="formula">攻撃力 ＝ 営業利益率（％）× 5</p>
+<div class="scroll"><table>
+<thead><tr><th>営業利益率</th><th>攻撃力</th></tr></thead>
+<tbody>
+<tr><td>0％以下（本業が赤字）</td><td>0</td></tr>
+<tr><td>5％</td><td>25</td></tr>
+<tr><td>10％</td><td>50</td></tr>
+<tr><td>20％以上</td><td>100</td></tr>
+</tbody></table></div>
+<p>営業利益率の高さは、業界によってちがいます。攻撃力は、同じ業界の会社どうしで比べてください。</p>
+
+<h2><i class="fa-solid fa-shield-halved"></i>防御力（倒れにくさ）</h2>
+<p>防御力は、会社が持っている資産のうち、返す必要のないお金（自己資本）でまかなっている割合を表します。</p>
+<p>この割合が高い会社は、借金にたよる分が少ないため、売上が急に落ちても倒れにくくなります。</p>
+<p class="formula">防御力 ＝ 自己資本比率（％）の値</p>
+<p>国際会計基準（IFRS）で決算を出している会社は、自己資本比率のかわりに、親会社所有者帰属持分比率を使います。</p>
+<p>自動車ローンなどの金融事業を持つ会社は、お客様に貸すお金を借りて集めるため、防御力が低めに出ます。</p>
+
+<h2><i class="fa-solid fa-bolt"></i>素早さ（伸びる速さ）</h2>
+<p>素早さは、売上高が、前の期から何％伸びたかを表します。</p>
+<p class="formula">素早さ ＝ 50 ＋ 売上高の伸び率（％）× 5</p>
+<div class="scroll"><table>
+<thead><tr><th>売上高の伸び率</th><th>素早さ</th></tr></thead>
+<tbody>
+<tr><td>−10％以下</td><td>0</td></tr>
+<tr><td>−5％</td><td>25</td></tr>
+<tr><td>0％（前の期と同じ）</td><td>50</td></tr>
+<tr><td>+5％</td><td>75</td></tr>
+<tr><td>+10％以上</td><td>100</td></tr>
+</tbody></table></div>
+<p>素早さが50より低いときは、売上高が前の期より減っています。</p>
+
+<h2><i class="fa-solid fa-heart"></i>HP（手元の現金で何か月もつか）</h2>
+<p>HPは、手元の現金だけで、会社の1か月分の費用を何か月まかなえるかを表します。</p>
+<p class="formula">HP（か月）＝ 現金及び現金同等物 ÷（（売上高 − 営業利益）÷ 12）</p>
+<p>1か月分の費用は、売上高から営業利益を引いて、12で割った金額にしています。バーは、12か月分で満タンになります。</p>
+<p>現金をためずに、工場や研究に使っている会社ほど、HPは低く出ます。HPが低いことだけで、その会社が危ないとはいえません。</p>
+
+<h2>状態異常</h2>
+<p>次のどれかに当てはまる会社には、状態異常を表示します。</p>
+<div class="scroll"><table>
+<thead><tr><th>状態異常</th><th>当てはまる条件</th></tr></thead>
+<tbody>
+<tr><td>営業赤字</td><td>本業のもうけ（営業利益）がマイナス</td></tr>
+<tr><td>最終赤字</td><td>税金などを引いた最後のもうけ（親会社株主に帰属する当期純利益）がマイナス</td></tr>
+<tr><td>最終赤字（2期連続）</td><td>最終赤字が、前の期から2期続いている</td></tr>
+<tr><td>債務超過</td><td>自己資本比率がマイナス（資産より、借金のほうが多い）</td></tr>
+</tbody></table></div>
+
+<h2>今期受けたダメージ</h2>
+<p>決算短信の本文に、金額つきで書かれている大きな損失を載せます。たとえば、米国の関税の影響や、減損損失です。</p>
+<p>金額が書かれていない影響は、載せません。</p>
+
+<h2>次の期の見通し</h2>
+<p>決算短信に載っている、会社自身の業績予想から、次の期の攻撃力と素早さを計算します。</p>
+<p>業績予想は、あとから会社が変えることがあります。</p>
+
+<h2>載せていない業種</h2>
+<p>銀行業、証券・商品先物取引業、保険業、その他金融業の会社は、まだ載せていません。</p>
+<p>これらの業種は、売上高や営業利益の考え方がほかの業種とちがうため、このページの式が当てはまらないからです。</p>
+
+<h2>式について</h2>
+<p>このページの式は、仮のものです。会計の専門家に確認してもらったあとで、変えることがあります。</p>
+<p>このサイトは、会社の状態を知るためのものです。株の売買をすすめるものではありません。</p>
+</article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="foot-nav">
+      <a href="index.html#industries">業界一覧</a>
+      <a href="about.html">数字の考え方</a>
+      <a href="https://startwith.org/" target="_blank" rel="noopener">運用会社</a>
+    </nav>
+    <p>このサイトは、会社の状態を知るためのものです。株の売買をすすめるものではありません。</p>
+    <p class="copy">© StartWith</p>
+  </div>
+</footer>
+
+</body>
+</html>

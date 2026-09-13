@@ -1,0 +1,33 @@
+{
+  "code": "7269",
+  "edinet_code": "E02167",
+  "name": "スズキ",
+  "yomi": "スズキ",
+  "en_name": "suzuki motor corporation",
+  "industry": "輸送用機器",
+  "url": "https://www.suzuki.co.jp/",
+  "period": "2026年3月期",
+  "standard": "IFRS",
+  "revenue": 6292967,
+  "revenue_prev": 5825161,
+  "growth": 8.0,
+  "growth_prev": 8.7,
+  "op": 622909,
+  "op_prev": 642851,
+  "net_income": 439267,
+  "net_income_prev": 416050,
+  "equity_ratio": 51.0,
+  "equity_ratio_prev": 49.6,
+  "cash": 973291,
+  "cash_prev": 842710,
+  "forecast": {
+    "revenue": 6800000,
+    "growth": 8.1,
+    "op": 570000,
+    "op_growth": -8.5
+  },
+  "source_url": "https://www.suzuki.co.jp/ir/library/financialaffairs/pdf/2026_fin/financialaffairs.pdf",
+  "source_title": "スズキ 2026年3月期 決算短信〔IFRS〕（連結）2026年5月14日",
+  "source_kind": "決算短信",
+  "fetched_at": "2026-09-13"
+}

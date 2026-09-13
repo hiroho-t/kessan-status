@@ -1,0 +1,40 @@
+{
+  "code": "7201",
+  "edinet_code": "E02142",
+  "name": "日産自動車",
+  "yomi": "ニッサンジドウシャ",
+  "en_name": "NISSAN MOTOR CO., LTD.",
+  "industry": "輸送用機器",
+  "url": "https://www.nissan-global.com/JP/",
+  "period": "2026年3月期",
+  "standard": "JGAAP",
+  "revenue": 12007888,
+  "revenue_prev": 12633214,
+  "growth": -4.9,
+  "growth_prev": -0.4,
+  "op": 58005,
+  "op_prev": 69798,
+  "net_income": -533095,
+  "net_income_prev": -670898,
+  "equity_ratio": 24.2,
+  "equity_ratio_prev": 26.1,
+  "cash": 2264801,
+  "cash_prev": 2197513,
+  "damages": [
+    "減損損失（特別損失）　−3,662億円",
+    "特別退職加算金（特別損失）　−850億円"
+  ],
+  "forecast": {
+    "revenue": 13000000,
+    "growth": 8.3,
+    "op": 200000,
+    "op_growth": 244.8
+  },
+  "notes": [
+    "自動車ローンなどの金融事業を持つため、防御力とHPは低めに出る。"
+  ],
+  "source_url": "https://www.nissan-global.com/JP/IR/FINANCIAL_RESULTS/ASSETS/DATA/2025/20254th_financialresult_792_j.pdf",
+  "source_title": "日産自動車 2026年3月期 決算短信〔日本基準〕（連結）2026年5月13日",
+  "source_kind": "決算短信",
+  "fetched_at": "2026-09-13"
+}
