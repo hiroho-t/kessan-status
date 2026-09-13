@@ -23165,6 +23165,20 @@
    "industry": "卸売業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
+  "E03040": {
+   "docID": "S100YEI3",
+   "code": "8252",
+   "name": "丸井グループ",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E03188": {
+   "docID": "S100Y4UH",
+   "code": "9946",
+   "name": "ミニストップ",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
   "E03252": {
    "docID": "S100YM73",
    "code": "7462",
@@ -23191,6 +23205,13 @@
    "code": "3358",
    "name": "Ｔｒａｉｌｈｅａｄ　Ｇｌｏｂａｌ　Ｈｏｌｄｉｎｇｓ",
    "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E03989": {
+   "docID": "S100YZFP",
+   "code": "8887",
+   "name": "シーラホールディングス",
+   "industry": "不動産業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E04064": {
@@ -23242,6 +23263,13 @@
    "industry": "サービス業",
    "reason": "足りない項目: revenue, revenue_prev"
   },
+  "E05528": {
+   "docID": "S100YKOH",
+   "code": "9423",
+   "name": "フォーバル・リアルストレート",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E05701": {
    "docID": "S100YEAK",
    "code": "2156",
@@ -23277,6 +23305,13 @@
    "industry": "医薬品",
    "reason": "足りない項目: revenue, revenue_prev"
   },
+  "E26675": {
+   "docID": "S100XSUO",
+   "code": "9419",
+   "name": "ワイヤレスゲート",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E30020": {
    "docID": "S100X7OR",
    "code": "3189",
@@ -23290,6 +23325,13 @@
    "name": "リボミック",
    "industry": "医薬品",
    "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E30908": {
+   "docID": "S100YET5",
+   "code": "9467",
+   "name": "アルファポリス",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E31382": {
    "docID": "S100XZTW",
@@ -23501,12 +23543,40 @@
    "industry": "医薬品",
    "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
   },
+  "E37199": {
+   "docID": "S100XBLU",
+   "code": "9258",
+   "name": "ＣＳ－Ｃ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E37207": {
    "docID": "S100WR1U",
    "code": "4263",
    "name": "サスメド",
    "industry": "情報・通信業",
    "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E37221": {
+   "docID": "S100YJBO",
+   "code": "9256",
+   "name": "サクシード",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E37292": {
+   "docID": "S100XV6A",
+   "code": "9214",
+   "name": "Ｒｅｃｏｖｅｒｙ　Ｉｎｔｅｒｎａｔｉｏｎａｌ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E37432": {
+   "docID": "S100XMVS",
+   "code": "9215",
+   "name": "ＣａＳｙ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E37502": {
    "docID": "S100XNPA",
@@ -23536,11 +23606,32 @@
    "industry": "情報・通信業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
+  "E37979": {
+   "docID": "S100XV2A",
+   "code": "9561",
+   "name": "グラッドキューブ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E37987": {
    "docID": "S100WWJN",
    "code": "5131",
    "name": "リンカーズ",
    "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E38082": {
+   "docID": "S100YJR8",
+   "code": "9204",
+   "name": "スカイマーク",
+   "industry": "空運業",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E38440": {
+   "docID": "S100XS2D",
+   "code": "9343",
+   "name": "アイビス",
+   "industry": "サービス業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E38453": {
@@ -23578,6 +23669,13 @@
    "industry": "小売業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
+  "E38698": {
+   "docID": "S100WR5N",
+   "code": "9162",
+   "name": "ブリーチ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E38755": {
    "docID": "S100XBVM",
    "code": "5586",
@@ -23604,6 +23702,13 @@
    "code": "5588",
    "name": "ファーストアカウンティング",
    "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E38969": {
+   "docID": "S100XIJD",
+   "code": "9237",
+   "name": "笑美面",
+   "industry": "サービス業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E38985": {

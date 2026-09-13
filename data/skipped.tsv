@@ -119,4 +119,19 @@
 8053	住友商事	卸売業	足りない項目: op, op_prev
 8058	三菱商事	卸売業	足りない項目: op, op_prev
 8113	ユニ・チャーム	化学	足りない項目: op, op_prev
+8252	丸井グループ	小売業	足りない項目: revenue, revenue_prev
+8887	シーラホールディングス	不動産業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9162	ブリーチ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9204	スカイマーク	空運業	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+9214	Ｒｅｃｏｖｅｒｙ　Ｉｎｔｅｒｎａｔｉｏｎａｌ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9215	ＣａＳｙ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9237	笑美面	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9256	サクシード	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9258	ＣＳ－Ｃ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9343	アイビス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9419	ワイヤレスゲート	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9423	フォーバル・リアルストレート	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9467	アルファポリス	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9561	グラッドキューブ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9946	ミニストップ	小売業	足りない項目: revenue, revenue_prev
 9984	ソフトバンクグループ	情報・通信業	足りない項目: op, op_prev
