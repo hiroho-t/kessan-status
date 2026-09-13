@@ -232,8 +232,7 @@ def company_page(c, s):
     notes = "".join(f"<p>{escape(n)}</p>" for n in c.get("notes", []))
     boxes.append((
         "数字について",
-        f'{notes}<p>ステータスの計算の式は、<a href="../about.html">数字の考え方</a>に書いています。</p>'
-        f'<p class="note">出典：<a href="{escape(c["source_url"])}" target="_blank" rel="noopener">{escape(c["source_title"])}</a></p>',
+        f'{notes}<p class="note">出典：<a href="{escape(c["source_url"])}" target="_blank" rel="noopener">{escape(c["source_title"])}</a></p>',
     ))
     box_html = "".join(f'\n    <section class="card box">\n      <h2>{t}</h2>\n      {b}\n    </section>' for t, b in boxes)
 
