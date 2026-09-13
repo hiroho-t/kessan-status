@@ -46,6 +46,8 @@ jobs:
             exit 0
           fi
           git commit -q -m "EDINETの新しい有価証券報告書を反映（自動）"
+          # 実行中に手元から push されていても、取り込んだ結果を捨てないように取り込み直してから push する
+          git pull -q --rebase -X theirs origin main
           git push -q
           echo "changed=true" >> "$GITHUB_OUTPUT"
 

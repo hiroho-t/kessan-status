@@ -282,6 +282,8 @@ def build_record(info, doc, facts):
     v, basis = extract(facts)
     if v is None:
         return None, basis
+    if to_million(v["revenue"]) <= 0 or to_million(v["revenue_prev"]) <= 0:
+        return None, "売上高が100万円未満（式で割れない）"
     end = dei(facts, "CurrentFiscalYearEndDateDEI") or doc.get("periodEnd", "")
     y, m = int(end[:4]), int(end[5:7])
     rec = dict(info)
