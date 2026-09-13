@@ -96,6 +96,9 @@ h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
 .box h2 { font-size:14px; margin:0 0 6px; }
 .box p { margin:0 0 4px; font-size:14px; }
 .box p.note { font-size:12px; margin-top:8px; }
+.facts { display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 16px; margin:0 0 10px; font-size:13px; }
+.facts dt { color:var(--sub); white-space:nowrap; }
+.facts dd { margin:0; }
 @media (max-width:420px) {
   .label em { display:block; margin-left:0; }
   .val { font-size:20px; }

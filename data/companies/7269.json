@@ -30,5 +30,9 @@
   "source_title": "スズキ 2026年3月期 決算短信〔IFRS〕（連結）2026年5月14日",
   "source_kind": "決算短信",
   "fetched_at": "2026-09-13",
-  "doc_id": "S100YFG2"
+  "doc_id": "S100YFG2",
+  "extraordinary_loss": null,
+  "impairment_loss": -2605,
+  "schema": 2,
+  "basis": "連結"
 }

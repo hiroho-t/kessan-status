@@ -37,5 +37,9 @@
   "source_title": "日産自動車 2026年3月期 決算短信〔日本基準〕（連結）2026年5月13日",
   "source_kind": "決算短信",
   "fetched_at": "2026-09-13",
-  "doc_id": "S100YH2B"
+  "doc_id": "S100YH2B",
+  "extraordinary_loss": 576838,
+  "impairment_loss": 366247,
+  "schema": 2,
+  "basis": "連結"
 }

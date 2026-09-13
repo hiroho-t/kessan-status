@@ -33,5 +33,9 @@
   "source_title": "マツダ 2026年3月期 決算短信〔日本基準〕（連結）2026年5月12日",
   "source_kind": "決算短信",
   "fetched_at": "2026-09-13",
-  "doc_id": "S100YDZ1"
+  "doc_id": "S100YDZ1",
+  "extraordinary_loss": 73159,
+  "impairment_loss": 3560,
+  "schema": 2,
+  "basis": "連結"
 }

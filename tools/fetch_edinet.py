@@ -59,6 +59,14 @@ OPERATING = [
 ]
 # IFRSでは営業利益を出さず、事業利益を出す会社がある（例：川崎重工業）。そのときだけ使い、ページに「事業利益」と書く
 BUSINESS_PROFIT = ["BusinessProfitLossIFRS"]
+# 今期受けたダメージ。日本基準は特別損失とその中の減損損失、IFRSは減損損失だけ（特別損失の区分が無い）
+EXTRAORDINARY_LOSS = ["ExtraordinaryLoss"]
+IMPAIRMENT_LOSS = [
+    "ImpairmentLossEL", "ImpairmentLosses2EL",
+    "ImpairmentLossesPLIFRS", "ImpairmentLossesOnFixedAssetsPLIFRS", "ImpairmentLossesOnNonFinancialAssetsIFRS",
+]
+# 読み取る項目を増やしたら上げる。古い番号で読んだ会社は、次の --update で読み直す（新しい会社を先に読む）
+SCHEMA = 2
 NET_INCOME = [
     "ProfitLossAttributableToOwnersOfParentSummaryOfBusinessResults",
     "ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults",
@@ -272,6 +280,8 @@ def extract(facts):
         required = ["revenue", "revenue_prev", "op", "op_prev", "net_income", "equity_ratio", "equity_ratio_prev", "cash"]
         miss = [k for k in required if v[k] is None]
         if not miss and v["revenue"] > 0 and v["revenue_prev"] > 0:
+            v["extraordinary_loss"] = pick(facts, EXTRAORDINARY_LOSS, cur_d)
+            v["impairment_loss"] = pick(facts, IMPAIRMENT_LOSS, cur_d)
             return v, ("連結" if not suffix else "個別")
         if not suffix:
             missing = miss
@@ -301,6 +311,9 @@ def build_record(info, doc, facts):
         "equity_ratio": ratio(v["equity_ratio"]), "equity_ratio_prev": ratio(v["equity_ratio_prev"]),
         "cash": to_million(v["cash"]),
         "cash_prev": to_million(v["cash_prev"]) if v["cash_prev"] is not None else None,
+        "extraordinary_loss": to_million(v["extraordinary_loss"]) if v["extraordinary_loss"] else None,
+        "impairment_loss": to_million(v["impairment_loss"]) if v["impairment_loss"] else None,
+        "schema": SCHEMA,
         "source_kind": "有価証券報告書",
         "source_url": f"https://disclosure2.edinet-fsa.go.jp/WZEK0040.aspx?{doc['docID']}",
         "source_title": f"{info['name']} {doc.get('docDescription') or '有価証券報告書'}（EDINET）{doc['submitDateTime'][:10]}提出",
@@ -316,7 +329,8 @@ def merge(path, rec):
         old = json.loads(path.read_text(encoding="utf-8"))
         same_period = old.get("period_end") == rec["period_end"] or old.get("period") == rec["period"]
         if old.get("source_kind", "決算短信") == "決算短信" and same_period:
-            old["doc_id"] = rec["doc_id"]  # 次から読み直さないように、報告書の番号だけ持つ
+            for k in ("doc_id", "extraordinary_loss", "impairment_loss", "schema", "basis"):
+                old[k] = rec[k]  # 数字は決算短信のまま。報告書の番号と、報告書にしか無い項目だけ足す
             path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             return False
         for k in ("url", "notes"):
@@ -330,9 +344,13 @@ def merge(path, rec):
     return True
 
 
-def current_doc_id(code):
+def is_current(code, doc_id):
+    """同じ報告書を、いまの SCHEMA で読んであれば True"""
     p = COMPANIES / f"{code}.json"
-    return json.loads(p.read_text(encoding="utf-8")).get("doc_id") if p.exists() else None
+    if not p.exists():
+        return False
+    d = json.loads(p.read_text(encoding="utf-8"))
+    return d.get("doc_id") == doc_id and d.get("schema", 1) >= SCHEMA
 
 
 def main():
@@ -366,9 +384,10 @@ def main():
         doc = filings["reports"].get(ec)
         if not doc:
             continue
-        if not args.force and (current_doc_id(info["code"]) == doc["docID"] or filings["skipped"].get(ec, {}).get("docID") == doc["docID"]):
+        if not args.force and (is_current(info["code"], doc["docID"]) or filings["skipped"].get(ec, {}).get("docID") == doc["docID"]):
             continue
         todo.append((ec, info, doc))
+    todo.sort(key=lambda t: (COMPANIES / f"{t[1]['code']}.json").exists())  # まだ載っていない会社を先に読む
     print(f"対象 {len(targets)}社のうち、新しい報告書を読む会社 {len(todo)}社" + (f"（今回は {args.max}社まで）" if args.max and len(todo) > args.max else ""))
     if args.max:
         todo = todo[: args.max]

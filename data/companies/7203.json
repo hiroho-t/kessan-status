@@ -37,5 +37,9 @@
   "source_title": "トヨタ自動車 2026年3月期 決算短信〔IFRS〕（連結）2026年5月8日",
   "source_kind": "決算短信",
   "fetched_at": "2026-09-13",
-  "doc_id": "S100Y8NY"
+  "doc_id": "S100Y8NY",
+  "extraordinary_loss": null,
+  "impairment_loss": null,
+  "schema": 2,
+  "basis": "連結"
 }

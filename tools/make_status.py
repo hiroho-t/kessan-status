@@ -9,6 +9,7 @@
 """
 import json
 import math
+import re
 import shutil
 from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
@@ -64,7 +65,10 @@ def hp(cash, rev, op):
 def yen(m):
     oku = int(r(abs(m) / 100))
     cho, rest = divmod(oku, 10000)
-    s = f"{cho}兆{rest:,}億円" if cho else f"{rest:,}億円"
+    if cho:
+        s = f"{cho}兆{rest:,}億円" if rest else f"{cho}兆円"
+    else:
+        s = f"{rest:,}億円"
     return ("−" if m < 0 else "") + s
 
 
@@ -251,7 +255,20 @@ def company_page(c, s):
 
     boxes = [("状態異常", f"<p>{'、'.join(s['ailments']) if s['ailments'] else 'なし（黒字・債務超過ではない）'}</p>")]
     if c.get("damages"):
-        boxes.append(("今期受けたダメージ", "".join(f"<p>{escape(x)}</p>" for x in c["damages"])))
+        dmg = "".join(f"<p>{escape(x)}</p>" for x in c["damages"]) + '<p class="note">決算短信の本文から</p>'
+    else:
+        items = []
+        if c.get("extraordinary_loss"):
+            items.append(f"特別損失　−{yen(c['extraordinary_loss'])}")
+        if c.get("impairment_loss"):
+            items.append(("うち減損損失　−" if c.get("extraordinary_loss") else "減損損失　−") + yen(c["impairment_loss"]))
+        if items:
+            dmg = "".join(f"<p>{x}</p>" for x in items) + '<p class="note">有価証券報告書の特別損失・減損損失から</p>'
+        elif c.get("schema", 1) >= 2:
+            dmg = "<p>有価証券報告書から読み取れる、特別損失・減損損失はありません</p>"
+        else:
+            dmg = "<p>まだ読み取っていません。毎朝の自動更新で入ります</p>"
+    boxes.append(("今期受けたダメージ", dmg))
     f = c.get("forecast")
     if f:
         op_g = signed(f["op_growth"]) if f.get("op_growth") is not None else "前期が赤字のため増減率なし"
@@ -260,10 +277,27 @@ def company_page(c, s):
             f'<p class="num">攻撃力 {s["atk"]} → {atk(f["op"], f["revenue"])}　／　素早さ {s["spd"]} → {spd(f["growth"])}</p>'
             f'<p class="note">営業収益 {yen(f["revenue"])}（{signed(f["growth"])}）、営業利益 {yen(f["op"])}（{op_g}）の予想から計算</p>',
         ))
+    if not f:
+        boxes.append(("次の期の見通し（会社の予想）", "<p>このサイトでは載せていません。会社の予想は、各社の決算短信に書かれています</p>"))
+    std_name = {"IFRS": "国際会計基準（IFRS）", "USGAAP": "米国会計基準", "JGAAP": "日本基準"}.get(c["standard"], c["standard"])
+    if c.get("submitted"):
+        filed = jdate(c["submitted"])
+    else:
+        m = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", c.get("source_title", ""))
+        filed = f"{m.group(1)}年{int(m.group(2))}月{int(m.group(3))}日" if m else "－"
+    fact_rows = [
+        ("決算期", c["period"]),
+        ("会計基準", std_name),
+        ("数字の範囲", "グループ全体（連結）" if c.get("basis", "連結") == "連結" else "この会社1社（個別）"),
+        ("元の書類", c.get("source_kind", "決算短信")),
+        ("書類の日付", filed),
+        ("まるめ方", "百万円未満を四捨五入"),
+    ]
+    facts = '<dl class="facts">' + "".join(f"<dt>{k}</dt><dd>{escape(str(v))}</dd>" for k, v in fact_rows) + "</dl>"
     notes = "".join(f"<p>{escape(n)}</p>" for n in c.get("notes", []))
     boxes.append((
         "数字について",
-        f'{notes}<p class="note">出典：<a href="{escape(c["source_url"])}" target="_blank" rel="noopener">{escape(c["source_title"])}</a></p>',
+        f'{facts}{notes}<p class="note">出典：<a href="{escape(c["source_url"])}" target="_blank" rel="noopener">{escape(c["source_title"])}</a></p>',
     ))
     box_html = "".join(f'\n    <section class="card box">\n      <h2>{t}</h2>\n      {b}\n    </section>' for t, b in boxes)
 
@@ -498,12 +532,13 @@ ABOUT_BODY = """<nav class="crumb"><a href="index.html">トップ</a> / 数字�
 </tbody></table></div>
 
 <h2>今期受けたダメージ</h2>
-<p>決算短信の本文に、金額つきで書かれている大きな損失を載せます。たとえば、米国の関税の影響や、減損損失です。</p>
-<p>金額が書かれていない影響は、載せません。</p>
+<p>有価証券報告書に載っている、特別損失と減損損失の金額を載せます。特別損失は、ふだんの事業とは別に、その期にだけ出た大きな損失です。</p>
+<p>減損損失は、工場や買収した会社などの価値が下がった分を、損失として計上した金額です。国際会計基準（IFRS）の会社には特別損失の区分がないため、減損損失だけを載せます。</p>
+<p>一部の会社は、決算短信の本文に金額つきで書かれている損失（米国の関税の影響など）を載せています。</p>
 
 <h2>次の期の見通し</h2>
-<p>決算短信に載っている、会社自身の業績予想から、次の期の攻撃力と素早さを計算します。</p>
-<p>業績予想は、あとから会社が変えることがあります。</p>
+<p>一部の会社だけ、決算短信に載っている会社自身の業績予想から、次の期の攻撃力と素早さを計算しています。業績予想は、あとから会社が変えることがあります。</p>
+<p>ほかの会社は、このサイトでは載せていません。会社の予想は、各社の決算短信に書かれています。</p>
 
 <h2><i class="fa-solid fa-rotate"></i>更新のタイミング</h2>
 <p>ステータスは、1社につき、年に1回更新します。</p>
@@ -625,6 +660,9 @@ h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
 .box h2 { font-size:14px; margin:0 0 6px; }
 .box p { margin:0 0 4px; font-size:14px; }
 .box p.note { font-size:12px; margin-top:8px; }
+.facts { display:grid; grid-template-columns:auto minmax(0,1fr); gap:4px 16px; margin:0 0 10px; font-size:13px; }
+.facts dt { color:var(--sub); white-space:nowrap; }
+.facts dd { margin:0; }
 @media (max-width:420px) {
   .label em { display:block; margin-left:0; }
   .val { font-size:20px; }
