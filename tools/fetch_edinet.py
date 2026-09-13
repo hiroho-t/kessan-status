@@ -65,9 +65,10 @@ NET_INCOME = [
     "NetIncomeLossAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults",
     "NetIncomeLossSummaryOfBusinessResults", "ProfitLossAttributableToOwnersOfParent", "ProfitLoss",
 ]
+# EquityToAssetRatioIFRSSummaryOfBusinessResults は、1株当たりの金額が入っている会社がある（例：ソフトバンクグループ 3057.72）ので使わない
 EQUITY_RATIO = [
     "EquityToAssetRatioSummaryOfBusinessResults", "RatioOfOwnersEquityToGrossAssetsIFRSSummaryOfBusinessResults",
-    "EquityToAssetRatioIFRSSummaryOfBusinessResults", "EquityToAssetRatioUSGAAPSummaryOfBusinessResults",
+    "EquityToAssetRatioUSGAAPSummaryOfBusinessResults",
 ]
 CASH = [
     "CashAndCashEquivalentsSummaryOfBusinessResults", "CashAndCashEquivalentsIFRSSummaryOfBusinessResults",
@@ -220,12 +221,17 @@ def number(v):
         return None
 
 
-def pick(facts, names, ctx):
+def pick(facts, names, ctx, ok=None):
     for n in names:
         v = number(facts.get((n, ctx)))
-        if v is not None:
+        if v is not None and (ok is None or ok(v)):
             return v
     return None
+
+
+def is_ratio(v):
+    """比率は小数（0.378）で入る。−1〜1を超える値は比率ではない"""
+    return -1 <= v <= 1
 
 
 def dei(facts, name):
@@ -244,7 +250,7 @@ def to_million(v):
 
 
 def ratio(v):
-    return r1(v * 100 if abs(v) <= 1.5 else v)
+    return r1(v * 100)
 
 
 def extract(facts):
@@ -258,7 +264,7 @@ def extract(facts):
             "revenue_prev2": pick(facts, REVENUE, pre2_d),
             "op": pick(facts, OPERATING, cur_d), "op_prev": pick(facts, OPERATING, pre_d), "op_label": "営業利益",
             "net_income": pick(facts, NET_INCOME, cur_d), "net_income_prev": pick(facts, NET_INCOME, pre_d),
-            "equity_ratio": pick(facts, EQUITY_RATIO, cur_i), "equity_ratio_prev": pick(facts, EQUITY_RATIO, pre_i),
+            "equity_ratio": pick(facts, EQUITY_RATIO, cur_i, is_ratio), "equity_ratio_prev": pick(facts, EQUITY_RATIO, pre_i, is_ratio),
             "cash": pick(facts, CASH, cur_i), "cash_prev": pick(facts, CASH, pre_i),
         }
         if v["op"] is None and v["op_prev"] is None:

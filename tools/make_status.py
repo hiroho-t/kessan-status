@@ -56,7 +56,9 @@ def spd(growth):
 
 
 def hp(cash, rev, op):
-    return float(r(cash / ((rev - op) / 12), 1))
+    """1か月の費用（売上−営業利益）が0以下の会社は計算できないので None"""
+    cost = (rev - op) / 12
+    return float(r(cash / cost, 1)) if cost > 0 else None
 
 
 def yen(m):
@@ -189,6 +191,10 @@ LIST_HEAD = """<div class="list-head" aria-hidden="true">
   </div>"""
 
 
+def hp_text(s):
+    return f"{s['hp']}か月" if s["hp"] is not None else "－"
+
+
 def list_item(c, s, p, show_industry=False):
     sub = f'{c["code"]}　{escape(c["industry"])}' if show_industry else c["code"]
     return f"""
@@ -198,7 +204,7 @@ def list_item(c, s, p, show_industry=False):
     <span class="c-stat"><em>攻撃力</em>{s["atk"]}</span>
     <span class="c-stat"><em>防御力</em>{s["dfn"]}</span>
     <span class="c-stat"><em>素早さ</em>{s["spd"]}</span>
-    <span class="c-stat"><em>HP</em>{s["hp"]}か月</span>
+    <span class="c-stat"><em>HP</em>{hp_text(s)}</span>
     <span class="c-ail"><em>状態異常</em>{escape(s["ail_short"])}</span>
   </a>"""
 
@@ -226,7 +232,11 @@ def company_page(c, s):
         atk_note = f"100円売って{abs(r(s['margin'], 1))}円の本業の赤字"
     spd_diff = f"前期 {s['spd_prev']} {diff(s['spd'], s['spd_prev'])}" if s["spd_prev"] is not None else ""
     spd_prev_txt = f"（前期 {signed(c['growth_prev'])}）" if c.get("growth_prev") is not None else ""
-    hp_diff = f"前期 {s['hp_prev']}か月 {diff(s['hp'], s['hp_prev'], 1)}" if s["hp_prev"] is not None else ""
+    hp_diff = f"前期 {s['hp_prev']}か月 {diff(s['hp'], s['hp_prev'], 1)}" if s["hp"] is not None and s["hp_prev"] is not None else ""
+    hp_val = f"{s['hp']}か月" if s["hp"] is not None else "－"
+    hp_bar = min(100, int(r(s["hp"] / 12 * 100))) if s["hp"] is not None else 0
+    hp_note = (f"現金 {yen(c['cash'])} ÷ 1か月の費用 約{yen(s['monthly'])}" if s["hp"] is not None
+               else f"現金 {yen(c['cash'])}。売上より費用が小さく出るため、1か月の費用を計算できない")
     highlight = f"。{escape(c['highlight'])}" if c.get("highlight") else ""
 
     stats = "".join([
@@ -236,8 +246,7 @@ def company_page(c, s):
              f"{ratio_name} {c['equity_ratio']}%（前期 {c['equity_ratio_prev']}%）。資産のうち、借りていないお金の割合"),
         stat("fa-bolt", "素早さ", "伸びる速さ", s["spd"], spd_diff, s["spd"],
              f"売上の伸び {signed(c['growth'])}{spd_prev_txt}。売上は{yen(c['revenue'])}{highlight}"),
-        stat("fa-heart", "HP", "手元の現金で何か月もつか", f"{s['hp']}か月", hp_diff, min(100, int(r(s["hp"] / 12 * 100))),
-             f"現金 {yen(c['cash'])} ÷ 1か月の費用 約{yen(s['monthly'])}"),
+        stat("fa-heart", "HP", "手元の現金で何か月もつか", hp_val, hp_diff, hp_bar, hp_note),
     ])
 
     boxes = [("状態異常", f"<p>{'、'.join(s['ailments']) if s['ailments'] else 'なし（黒字・債務超過ではない）'}</p>")]
@@ -343,7 +352,7 @@ SEARCH_JS = """<script src="search-index.js"></script>
       a.appendChild(cell('c-stat', '攻撃力', d.atk));
       a.appendChild(cell('c-stat', '防御力', d.dfn));
       a.appendChild(cell('c-stat', '素早さ', d.spd));
-      a.appendChild(cell('c-stat', 'HP', d.hp + 'か月'));
+      a.appendChild(cell('c-stat', 'HP', d.hp));
       a.appendChild(cell('c-ail', '状態異常', d.ail));
       out.appendChild(a);
     });
@@ -566,7 +575,8 @@ h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
 /* 一覧（業界ページと検索結果） */
 .list { border:2px solid var(--ink); }
 .list-head, .item { display:grid; grid-template-columns:minmax(0,2.6fr) repeat(5,minmax(0,1fr)) minmax(0,1.6fr); gap:8px 12px; padding:12px 16px; align-items:center; }
-.list-head { font-size:12px; font-weight:700; border-bottom:2px solid var(--ink); align-items:end; }
+/* PCでは項目名をスクロールに追従させる（スマホは項目名を出さず、1社ずつラベルを付ける） */
+.list-head { font-size:12px; font-weight:700; border-bottom:2px solid var(--ink); align-items:end; position:sticky; top:0; z-index:2; background:#fff; }
 .list-head small { display:block; font-weight:400; color:var(--sub); font-size:11px; }
 .list-head i { margin-right:4px; }
 .list-head span:nth-child(n+2):nth-child(-n+6), .c-stat { text-align:right; }
@@ -638,12 +648,20 @@ h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
 # ---------- 実行 ----------
 
 def main():
-    companies = []
+    companies, broken = [], []
     for p in sorted(DATA.glob("*.json")):
         c = json.loads(p.read_text(encoding="utf-8"))
         if c["industry"] in EXCLUDED:
             continue
-        companies.append((c, compute(c)))
+        try:  # 1社の数字がおかしくても、ほかの会社のページは作る
+            s = compute(c)
+            company_page(c, s)
+        except Exception as e:
+            broken.append(f"{p.stem}\t{c.get('name', '')}\t{type(e).__name__}: {e}")
+            continue
+        companies.append((c, s))
+    if broken:
+        print(f"計算できずに飛ばした会社 {len(broken)}社:\n  " + "\n  ".join(broken))
     companies.sort(key=lambda cs: (-cs[1]["lv"], -cs[0]["revenue"]))
 
     for sub in ("company", "industry"):
@@ -663,7 +681,7 @@ def main():
     index = [
         {"code": c["code"], "name": c["name"], "yomi": c.get("yomi", ""), "en": c.get("en_name", ""),
          "industry": c["industry"], "rev": c["revenue"], "lv": s["lv"], "atk": s["atk"], "dfn": s["dfn"],
-         "spd": s["spd"], "hp": s["hp"], "ail": s["ail_short"]}
+         "spd": s["spd"], "hp": hp_text(s), "ail": s["ail_short"]}
         for c, s in companies
     ]
     (OUT / "search-index.js").write_text(

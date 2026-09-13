@@ -22941,6 +22941,13 @@
   }
  },
  "skipped": {
+  "E02778": {
+   "docID": "S100YGH5",
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: op, op_prev"
+  },
   "E41130": {
    "docID": "S100YK16",
    "code": "543A",

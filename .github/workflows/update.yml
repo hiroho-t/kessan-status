@@ -29,11 +29,14 @@ jobs:
           EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
         run: python3 tools/fetch_edinet.py --update --max 1500
 
+      # 取り込みが途中で止まっても、取れた分は捨てずにページにしてコミットする
       - name: ページを作る
+        if: ${{ !cancelled() }}
         run: python3 tools/make_status.py
 
       - name: 変わっていたらコミットする
         id: commit
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,7 +52,7 @@ jobs:
   # GITHUB_TOKEN の push では pages.yml が動かないので、ここで公開する
   deploy:
     needs: update
-    if: needs.update.outputs.changed == 'true'
+    if: ${{ !cancelled() && needs.update.outputs.changed == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
