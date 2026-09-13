@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>決算ステータス｜自動車</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root { --ink:#111; --sub:#666; --line:#ddd; --bar:#eee; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font-family:"Noto Sans JP",sans-serif; line-height:1.7; }
+  .wrap { max-width:640px; margin:0 auto; padding:40px 20px 60px; }
+  .num { font-variant-numeric:tabular-nums; }
+  .back { font-size:13px; margin-bottom:12px; }
+  .back a, .url a { color:var(--ink); }
+
+  .head { border:2px solid var(--ink); padding:20px 24px; }
+  .head-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .name { font-size:24px; font-weight:700; margin:0; }
+  .lv { font-size:28px; font-weight:700; }
+  .lv small { font-size:14px; font-weight:500; margin-right:4px; }
+  .meta { color:var(--sub); font-size:13px; margin-top:4px; }
+  .url { font-size:13px; margin-top:2px; }
+  .label i { width:1.3em; text-align:center; margin-right:6px; }
+  .meta span + span::before { content:"／"; }
+
+  .stats { border:2px solid var(--ink); border-top:none; padding:8px 24px 16px; }
+  .stat { padding:14px 0; border-bottom:1px solid var(--line); }
+  .stat:last-child { border-bottom:none; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .label { font-weight:700; font-size:16px; }
+  .label em { font-style:normal; font-weight:400; font-size:12px; color:var(--sub); margin-left:8px; }
+  .val { font-size:22px; font-weight:700; white-space:nowrap; }
+  .diff { font-size:13px; color:var(--sub); margin-left:8px; font-weight:400; }
+  .bar { height:10px; background:var(--bar); margin:6px 0 4px; }
+  .bar i { display:block; height:100%; background:var(--ink); }
+  .note { font-size:12px; color:var(--sub); }
+
+  .box { border:2px solid var(--ink); border-top:none; padding:16px 24px; }
+  .box h2 { font-size:14px; margin:0 0 6px; }
+  .box p { margin:0; font-size:14px; }
+
+  .foot { margin-top:28px; font-size:12px; color:var(--sub); }
+  .foot p { margin:0 0 8px; }
+  .foot a { color:var(--sub); }
+
+  table { width:100%; border-collapse:collapse; border:2px solid var(--ink); font-size:14px; }
+  th, td { padding:10px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-size:12px; font-weight:700; }
+  th i { margin-right:4px; }
+  th small { display:block; font-size:11px; font-weight:400; color:var(--sub); }
+  th { vertical-align:bottom; }
+  td a { color:var(--ink); font-weight:700; }
+  .scroll { overflow-x:auto; }
+  h1.page { font-size:22px; margin:0 0 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="page">決算ステータス　自動車</h1>
+  <p class="note" style="margin:0 0 16px">2026年3月期の決算短信（連結）から。売上の大きい順</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>会社</th><th>規模Lv<small>売上の大きさ</small></th><th><i class="fa-solid fa-hand-fist"></i>攻撃力<small>稼ぐ力</small></th><th><i class="fa-solid fa-shield-halved"></i>防御力<small>倒れにくさ</small></th><th><i class="fa-solid fa-bolt"></i>素早さ<small>伸びる速さ</small></th><th><i class="fa-solid fa-heart"></i>HP<small>現金で何か月もつか</small></th><th>状態異常<small>赤字・債務超過</small></th></tr></thead>
+    <tbody><tr><td><a href="トヨタ.html">トヨタ自動車</a></td><td class="num">92</td><td class="num">37</td><td class="num">38</td><td class="num">78</td><td class="num">3.2か月</td><td>なし</td></tr><tr><td><a href="ホンダ.html">本田技研工業</a></td><td class="num">86</td><td class="num">0</td><td class="num">35</td><td class="num">53</td><td class="num">2.8か月</td><td>営業赤字、最終赤字</td></tr><tr><td><a href="日産.html">日産自動車</a></td><td class="num">82</td><td class="num">2</td><td class="num">24</td><td class="num">26</td><td class="num">2.3か月</td><td>最終赤字</td></tr><tr><td><a href="スズキ.html">スズキ</a></td><td class="num">77</td><td class="num">49</td><td class="num">51</td><td class="num">90</td><td class="num">2.1か月</td><td>なし</td></tr><tr><td><a href="マツダ.html">マツダ</a></td><td class="num">76</td><td class="num">5</td><td class="num">43</td><td class="num">40</td><td class="num">3.2か月</td><td>なし</td></tr></tbody>
+  </table>
+  </div>
+  <div class="foot">
+    <p><strong>数字の変え方（仮）</strong><br>
+    規模Lv＝1＋log10(売上高・億円)×16（売上1億円でLv.1、1兆円でLv.65、上限99）。会社の大きさだけを表し、経営の良し悪しは表さない<br>
+    攻撃力＝営業利益率×5（20%で100）／防御力＝自己資本の比率そのまま（100%で100）<br>
+    素早さ＝50＋売上の伸び率×5（伸び0%で50、+10%で100）／HP＝現金÷（営業収益−営業利益）の1か月分。バーは12か月で満タン<br>
+    ステータスは0〜100で止める。式は会計の専門家の確認前。</p>
+    <p>この画面は会社の状態を知るためのもので、株の売買をすすめるものではない。</p>
+  </div>
+
+</div>
+</body>
+</html>
