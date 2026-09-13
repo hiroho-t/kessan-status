@@ -1,0 +1,62 @@
+# 毎朝、EDINETに新しい有価証券報告書が出た会社だけを取り込み、ページを作り直して公開する
+name: Update from EDINET
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 毎朝6時（日本時間）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: EDINETから取り込む（初回の取り込みは1回1,500社までに分ける）
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+        run: python3 tools/fetch_edinet.py --update --max 1500
+
+      - name: ページを作る
+        run: python3 tools/make_status.py
+
+      - name: 変わっていたらコミットする
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data pages
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -q -m "EDINETの新しい有価証券報告書を反映（自動）"
+          git push -q
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  # GITHUB_TOKEN の push では pages.yml が動かないので、ここで公開する
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+      - uses: actions/deploy-pages@v4

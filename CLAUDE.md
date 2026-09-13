@@ -64,22 +64,32 @@
 | 作業の日記 | `log/YYYY-MM-DD_短い題.md` |
 | 会社を正しく知るシリーズ全体 | **giraffess リポジトリ** `docs/36_会社を正しく知るシリーズ.md` |
 
-### 会社を増やす
+### 会社の更新（自動・手は要らない）
+
+**毎朝6時（日本時間）に GitHub Actions（`.github/workflows/update.yml`）が回る。**
+1. `fetch_edinet.py --update`：前回見た日の2日前から今日までのEDINET書類一覧だけを見て、新しい有価証券報告書が出た会社だけXBRLを読む
+2. `make_status.py`：ページを作り直す
+3. 変わっていればコミットして、GitHub Pages に公開する
+
+- **更新は1社につき年1回**（有価証券報告書は期末から3か月以内に出る）。3月決算の会社は6月下旬にまとめて更新される
+- 状態は `data/filings.json`（会社ごとの最新の有報と、最後に見た日）に持つ。**消すと初回扱い（400日さかのぼる）になる**
+- 初回の取り込みは1回1,500社までに分けてある（3,600社ほどを3日で終える）
+- 失敗すると GitHub から社長にメールが届く。読めなかった会社は `data/skipped.tsv` に理由つきで出る。要素IDの取りこぼしなら `fetch_edinet.py` の候補リストに足して、`--codes <証券コード> --force` で読み直す
+
+### 手で動かすとき
 
 ```bash
-# 準備（1回だけ）：EDINET API のキーを置く。リポジトリには入れない
-mkdir -p ~/.config/kessan-status && pbpaste > ~/.config/kessan-status/edinet_api_key
-
-python3 tools/fetch_edinet.py --industry 輸送用機器   # 業種ごと
-python3 tools/fetch_edinet.py --codes 6758 9984       # 証券コードを指定
-python3 tools/fetch_edinet.py --all --limit 200       # 証券コード順に200社
-python3 tools/make_status.py                          # ページを作り直す
+# キー（手元）：~/.config/kessan-status/edinet_api_key（リポジトリには入れない）
+# キー（Actions）：リポジトリの Secret `EDINET_API_KEY`
+python3 tools/fetch_edinet.py --update              # 自動と同じ
+python3 tools/fetch_edinet.py --industry 輸送用機器   # 業種を指定
+python3 tools/fetch_edinet.py --codes 6758 --force  # 読み直す
+python3 tools/make_status.py                        # ページを作り直す
 ```
 
-- 有価証券報告書から取れるのは実績だけ。**次の期の見通し・今期受けたダメージは、決算短信を読んで手で入れる**（`forecast`・`damages`）
+- 有価証券報告書から取れるのは実績だけ。**次の期の見通し・今期受けたダメージは任意。**入れたいときだけ、決算短信を読んで手で入れる（`forecast`・`damages`）
 - 決算短信から手で入れた会社は、同じ期なら fetch で上書きされない
-- 取れなかった会社は `data/cache/skipped.tsv` に理由つきで出る。要素IDが見つからないときは `fetch_edinet.py` の候補リストに足す
-- 書類一覧とXBRLは `data/cache/` に貯まる（git に入れない）
+- 手元では、書類一覧とXBRLが `data/cache/` に貯まる（git に入れない）
 
 ### ドライブへの同期
 
@@ -96,7 +106,8 @@ rsync -a --delete pages/ "$HOME/Library/CloudStorage/GoogleDrive-hiroho.tsukiji@
 | 1 | 1社で試す（トヨタ） | 済 |
 | 2 | 同業種で並べる（自動車5社、2026年3月期・決算短信から手入力） | 済 |
 | 3 | 検索・業界別一覧・数字の考え方・レスポンシブ | 済 |
-| 4 | **EDINET API のキーを取る（社長）** → `fetch_edinet.py` を実データで試す | **未。スクリプトは作り込み済み・実データでは未検証** |
+| 4 | EDINET API のキー（手元・Actions の Secret）→ 輸送用機器81社で実データを試す | 済（2026-09-13。80社取れた。取れないのは上場1期目のARCHIONだけ） |
+| 4-2 | 上場企業すべての取り込み（毎朝の自動更新が1回1,500社ずつ進める） | 進行中 |
 | 5 | 式の見直し（**HPは現金を貯めこむ会社ほど高く出る。**スズキが最下位になった） | 未 |
 | 6 | 会計の専門家に式を見てもらう | 未 |
 

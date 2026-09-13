@@ -109,6 +109,27 @@ def compute(c):
     return s
 
 
+def next_update(c):
+    """有価証券報告書は期末から3か月以内に出る。次の期末＋3か月を目安にする"""
+    end = c.get("period_end")
+    if end:
+        y, m = int(end[:4]), int(end[5:7])
+    else:
+        y, m = (int(x) for x in c["period"].replace("月期", "").split("年"))
+    y, m = y + 1, m + 3
+    if m > 12:
+        y, m = y + 1, m - 12
+    return f"{y}年{m}月ごろ"
+
+
+def updated(c):
+    return c.get("submitted") or c.get("fetched_at", "")
+
+
+def jdate(iso):
+    return f"{int(iso[:4])}年{int(iso[5:7])}月{int(iso[8:10])}日" if iso else ""
+
+
 # ---------- 共通の枠 ----------
 
 def layout(title, body, depth=0, description="", scripts=""):
@@ -198,6 +219,7 @@ def company_page(c, s):
       </div>"""
 
     ratio_name = "親会社所有者帰属持分比率" if c["standard"] == "IFRS" else "自己資本比率"
+    op_label = c.get("op_label", "営業利益")
     if s["margin"] >= 0:
         atk_note = f"100円売って{r(s['margin'], 1)}円が本業のもうけ"
     else:
@@ -209,7 +231,7 @@ def company_page(c, s):
 
     stats = "".join([
         stat("fa-hand-fist", "攻撃力", "稼ぐ力", s["atk"], f"前期 {s['atk_prev']} {diff(s['atk'], s['atk_prev'])}", s["atk"],
-             f"営業利益率 {pct(s['margin'])}（前期 {pct(s['margin_prev'])}）。{atk_note}"),
+             f"{op_label}率 {pct(s['margin'])}（前期 {pct(s['margin_prev'])}）。{atk_note}"),
         stat("fa-shield-halved", "防御力", "倒れにくさ", s["dfn"], f"前期 {s['dfn_prev']} {diff(s['dfn'], s['dfn_prev'])}", s["dfn"],
              f"{ratio_name} {c['equity_ratio']}%（前期 {c['equity_ratio_prev']}%）。資産のうち、借りていないお金の割合"),
         stat("fa-bolt", "素早さ", "伸びる速さ", s["spd"], spd_diff, s["spd"],
@@ -246,7 +268,7 @@ def company_page(c, s):
         <h1 class="name">{escape(c["name"])}</h1>
         <div class="lv num"><small>規模Lv.</small>{s["lv"]}</div>
       </div>{url_html}
-      <div class="meta"><span>業種：{ind}</span><span>{escape(c["period"])}</span><span>証券コード {c["code"]}</span></div>
+      <div class="meta"><span>業種：{ind}</span><span>{escape(c["period"])}</span><span>証券コード {c["code"]}</span><span>次の更新 {next_update(c)}</span></div>
     </section>
     <section class="card stats">{stats}
     </section>
@@ -335,7 +357,14 @@ SEARCH_JS = """<script src="search-index.js"></script>
 </script>"""
 
 
-def index_page(by_ind, total):
+def index_page(by_ind, total, companies):
+    recent = sorted(companies, key=lambda cs: (updated(cs[0]), cs[0]["revenue"]), reverse=True)[:10]
+    last = updated(recent[0][0]) if recent else ""
+    recent_html = "".join(
+        f'<li><span class="date">{jdate(updated(c))}</span><a href="company/{c["code"]}.html">{escape(c["name"])}</a>'
+        f'<small>{escape(c["industry"])}／{escape(c["period"])}</small></li>'
+        for c, _ in recent
+    )
     cells = []
     for name in INDUSTRIES:
         if name in EXCLUDED:
@@ -348,7 +377,7 @@ def index_page(by_ind, total):
     body = f"""<section class="hero">
   <h1>{SITE}</h1>
   <p>上場企業の決算を、ゲームのステータスの形で見せるサイトです。決算書を読まなくても、会社の大きさや稼ぐ力を比べられます。</p>
-  <p class="note">掲載 {total}社（{date.today():%Y年%-m月%-d日}更新）。ステータスの意味は<a href="about.html">数字の考え方</a>に書いています。</p>
+  <p class="note">掲載 {total}社（{jdate(last)}更新）。毎朝、金融庁のEDINETを確認し、新しい有価証券報告書が出た会社を更新しています。ステータスの意味は<a href="about.html">数字の考え方</a>に書いています。</p>
 </section>
 
 <section id="search" class="section">
@@ -360,6 +389,13 @@ def index_page(by_ind, total):
   <p id="count" class="note" aria-live="polite"></p>
   <div id="results" class="list" hidden></div>
   <template id="list-head">{LIST_HEAD}</template>
+</section>
+
+<section id="recent" class="section">
+  <h2>最近更新した会社</h2>
+  <ul class="recent">
+    {recent_html}
+  </ul>
 </section>
 
 <section id="industries" class="section">
@@ -460,6 +496,11 @@ ABOUT_BODY = """<nav class="crumb"><a href="index.html">トップ</a> / 数字�
 <p>決算短信に載っている、会社自身の業績予想から、次の期の攻撃力と素早さを計算します。</p>
 <p>業績予想は、あとから会社が変えることがあります。</p>
 
+<h2><i class="fa-solid fa-rotate"></i>更新のタイミング</h2>
+<p>ステータスは、1社につき、年に1回更新します。</p>
+<p>上場企業は、決算期末から3か月以内に、有価証券報告書を金融庁のEDINETに出します。このサイトは毎朝EDINETを確認し、新しい有価証券報告書が出た会社のページを、提出の翌朝に作り直します。</p>
+<p>たとえば3月決算の会社は、6月に出る有価証券報告書をもとに、翌朝に新しいステータスになります。会社のページの「次の更新」に、次に更新する月の目安を書いています。</p>
+
 <h2>載せていない業種</h2>
 <p>銀行業、証券・商品先物取引業、保険業、その他金融業の会社は、まだ載せていません。</p>
 <p>これらの業種は、売上高や営業利益の考え方がほかの業種とちがうため、このページの式が当てはまらないからです。</p>
@@ -515,6 +556,12 @@ h1 { font-size:clamp(22px,3vw,30px); margin:0 0 8px; line-height:1.4; }
 .ind-grid a:hover { background:var(--hover); }
 .ind-grid .empty { border-color:var(--line); color:var(--muted); }
 .ind-grid small { font-size:12px; color:var(--sub); white-space:nowrap; }
+
+.recent { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); max-width:760px; }
+.recent li { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 16px; padding:10px 0; border-bottom:1px solid var(--line); }
+.recent .date { font-size:13px; color:var(--sub); min-width:9em; font-variant-numeric:tabular-nums; }
+.recent a { font-weight:700; }
+.recent small { font-size:12px; color:var(--sub); }
 
 /* 一覧（業界ページと検索結果） */
 .list { border:2px solid var(--ink); }
@@ -622,7 +669,7 @@ def main():
     (OUT / "search-index.js").write_text(
         "window.KESSAN_INDEX=" + json.dumps(index, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
     (OUT / "style.css").write_text(CSS, encoding="utf-8")
-    (OUT / "index.html").write_text(index_page(by_ind, len(companies)), encoding="utf-8")
+    (OUT / "index.html").write_text(index_page(by_ind, len(companies), companies), encoding="utf-8")
     (OUT / "about.html").write_text(about_page(), encoding="utf-8")
     print(f"{len(companies)}社・{len(by_ind)}業種を書き出しました")
 
