@@ -1,3 +1,61 @@
 証券コード	社名	業種	理由
+0000	クラサスケミカル	化学	足りない項目: revenue, op, net_income, equity_ratio, cash
+130A	Ｖｅｒｉｔａｓ　Ｉｎ　Ｓｉｌｉｃｏ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+155A	情報戦略テクノロジー	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+168A	イタミアート	その他製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+1764	工藤建設	建設業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+1777	川崎設備工業	建設業	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+190A	Ｃｈｏｒｄｉａ　Ｔｈｅｒａｐｅｕｔｉｃｓ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+1950	日本電設工業	建設業	足りない項目: revenue, revenue_prev
+1952	新日本空調	建設業	足りない項目: revenue, revenue_prev
+2156	セーラー広告	サービス業	足りない項目: revenue, revenue_prev
+2163	アルトナー	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+218A	Ｌｉｂｅｒａｗａｒｅ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2216	カンロ	食料品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2266	六甲バター	食料品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2282	日本ハム	食料品	足りない項目: op, op_prev
+2323	ｆｏｎｆｕｎ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2334	イオレ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2433	博報堂ＤＹホールディングス	サービス業	足りない項目: revenue, revenue_prev
+248A	キッズスター	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+253A	ＥＴＳグループ	建設業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+2768	双日	卸売業	足りない項目: op, op_prev
+280A	ＴＭＨ	卸売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+299A	クラシル	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+3079	ディーブイエックス	卸売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+3189	ＡＮＡＰホールディングス	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+3236	プロパスト	不動産業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+323A	フライヤー	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+330A	ＴａｌｅｎｔＸ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+331A	メディックス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+332A	ミーク	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+3358	Ｔｒａｉｌｈｅａｄ　Ｇｌｏｂａｌ　Ｈｏｌｄｉｎｇｓ	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+340A	ジグザグ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+350A	デジタルグリッド	電気・ガス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+3624	アクセルマーク	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+366A	ウェルネス・コミュニケーションズ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4151	協和キリン	医薬品	足りない項目: op, op_prev
+415A	ＧＭＯ　ＴＥＣＨホールディングス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4168	ヤプリ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+416A	富士ユナイトホールディングス	卸売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4179	ジーネクスト	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+417A	ブルーゾーンホールディングス	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4197	アスマーク	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4263	サスメド	情報・通信業	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4270	ＢｅｅＸ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4370	モビルス	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4377	ワンキャリア	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4378	ＣＩＮＣ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4381	ビープラッツ	情報・通信業	足りない項目: equity_ratio
+4563	アンジェス	医薬品	足りない項目: revenue, revenue_prev
+4575	キャンバス	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4579	ラクオリア創薬	医薬品	足りない項目: revenue, revenue_prev
+4591	リボミック	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4592	サンバイオ	医薬品	足りない項目: revenue, revenue_prev
+4598	ＤｅｌｔａーＦｌｙ　Ｐｈａｒｍａ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4599	ステムリム	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+463A	インテリックスホールディングス	不動産業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4642	オリジナル設計	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+464A	ＱＰＳホールディングス	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 543A	ＡＲＣＨＩＯＮ	輸送用機器	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 9984	ソフトバンクグループ	情報・通信業	足りない項目: op, op_prev

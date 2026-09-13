@@ -22941,6 +22941,62 @@
   }
  },
  "skipped": {
+  "E00115": {
+   "docID": "S100YGLL",
+   "code": "1950",
+   "name": "日本電設工業",
+   "industry": "建設業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E00227": {
+   "docID": "S100YDMT",
+   "code": "1952",
+   "name": "新日本空調",
+   "industry": "建設業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E00271": {
+   "docID": "S100YG5D",
+   "code": "1777",
+   "name": "川崎設備工業",
+   "industry": "建設業",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E00282": {
+   "docID": "S100WRZI",
+   "code": "1764",
+   "name": "工藤建設",
+   "industry": "建設業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E00334": {
+   "docID": "S100YEEQ",
+   "code": "2282",
+   "name": "日本ハム",
+   "industry": "食料品",
+   "reason": "足りない項目: op, op_prev"
+  },
+  "E00337": {
+   "docID": "S100XSYQ",
+   "code": "2266",
+   "name": "六甲バター",
+   "industry": "食料品",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E00378": {
+   "docID": "S100XTWS",
+   "code": "2216",
+   "name": "カンロ",
+   "industry": "食料品",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E00816": {
+   "docID": "S100XPTY",
+   "code": "4151",
+   "name": "協和キリン",
+   "industry": "医薬品",
+   "reason": "足りない項目: op, op_prev"
+  },
   "E02778": {
    "docID": "S100YGH5",
    "code": "9984",
@@ -22948,12 +23004,362 @@
    "industry": "情報・通信業",
    "reason": "足りない項目: op, op_prev"
   },
+  "E02958": {
+   "docID": "S100Y9EI",
+   "code": "2768",
+   "name": "双日",
+   "industry": "卸売業",
+   "reason": "足りない項目: op, op_prev"
+  },
+  "E03005": {
+   "docID": "S100YL91",
+   "code": "3079",
+   "name": "ディーブイエックス",
+   "industry": "卸売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E03451": {
+   "docID": "S100YLWW",
+   "code": "3358",
+   "name": "Ｔｒａｉｌｈｅａｄ　Ｇｌｏｂａｌ　Ｈｏｌｄｉｎｇｓ",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E04064": {
+   "docID": "S100YZF9",
+   "code": "3236",
+   "name": "プロパスト",
+   "industry": "不動産業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E04955": {
+   "docID": "S100XU33",
+   "code": "4642",
+   "name": "オリジナル設計",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E05301": {
+   "docID": "S100XTMQ",
+   "code": "4563",
+   "name": "アンジェス",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E05302": {
+   "docID": "S100YKRB",
+   "code": "2323",
+   "name": "ｆｏｎｆｕｎ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E05410": {
+   "docID": "S100YHXU",
+   "code": "2433",
+   "name": "博報堂ＤＹホールディングス",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E05701": {
+   "docID": "S100YEAK",
+   "code": "2156",
+   "name": "セーラー広告",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E05707": {
+   "docID": "S100XBJN",
+   "code": "3624",
+   "name": "アクセルマーク",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E05717": {
+   "docID": "S100Y062",
+   "code": "2163",
+   "name": "アルトナー",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E23487": {
+   "docID": "S100WQRS",
+   "code": "4575",
+   "name": "キャンバス",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E25269": {
+   "docID": "S100XSQX",
+   "code": "4579",
+   "name": "ラクオリア創薬",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E30020": {
+   "docID": "S100X7OR",
+   "code": "3189",
+   "name": "ＡＮＡＰホールディングス",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E30865": {
+   "docID": "S100YF0X",
+   "code": "4591",
+   "name": "リボミック",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E31382": {
+   "docID": "S100XZTW",
+   "code": "4592",
+   "name": "サンバイオ",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E33595": {
+   "docID": "S100YMZU",
+   "code": "2334",
+   "name": "イオレ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E33825": {
+   "docID": "S100YDPE",
+   "code": "4381",
+   "name": "ビープラッツ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: equity_ratio"
+  },
+  "E34318": {
+   "docID": "S100YJOM",
+   "code": "4598",
+   "name": "ＤｅｌｔａーＦｌｙ　Ｐｈａｒｍａ",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E34999": {
+   "docID": "S100WW19",
+   "code": "4599",
+   "name": "ステムリム",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E36107": {
+   "docID": "S100XVB7",
+   "code": "4168",
+   "name": "ヤプリ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E36398": {
+   "docID": "S100YIOX",
+   "code": "4179",
+   "name": "ジーネクスト",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E36795": {
+   "docID": "S100X6MF",
+   "code": "4370",
+   "name": "モビルス",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E36937": {
+   "docID": "S100Y5VS",
+   "code": "4270",
+   "name": "ＢｅｅＸ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E36944": {
+   "docID": "S100XUP3",
+   "code": "4377",
+   "name": "ワンキャリア",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E36989": {
+   "docID": "S100XHNB",
+   "code": "4378",
+   "name": "ＣＩＮＣ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E37207": {
+   "docID": "S100WR1U",
+   "code": "4263",
+   "name": "サスメド",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E37502": {
+   "docID": "S100XNPA",
+   "code": "4197",
+   "name": "アスマーク",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E37743": {
+   "docID": "S100YKON",
+   "code": "366A",
+   "name": "ウェルネス・コミュニケーションズ",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E38905": {
+   "docID": "S100X63V",
+   "code": "190A",
+   "name": "Ｃｈｏｒｄｉａ　Ｔｈｅｒａｐｅｕｔｉｃｓ",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E39268": {
+   "docID": "S100XSIT",
+   "code": "130A",
+   "name": "Ｖｅｒｉｔａｓ　Ｉｎ　Ｓｉｌｉｃｏ",
+   "industry": "医薬品",
+   "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E39273": {
+   "docID": "S100Y111",
+   "code": "168A",
+   "name": "イタミアート",
+   "industry": "その他製品",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E39405": {
+   "docID": "S100XTWQ",
+   "code": "155A",
+   "name": "情報戦略テクノロジー",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E39449": {
+   "docID": "S100XTN4",
+   "code": "248A",
+   "name": "キッズスター",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E39677": {
+   "docID": "S100XCCN",
+   "code": "253A",
+   "name": "ＥＴＳグループ",
+   "industry": "建設業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E39788": {
+   "docID": "S100WY33",
+   "code": "218A",
+   "name": "Ｌｉｂｅｒａｗａｒｅ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40175": {
+   "docID": "S100XNNH",
+   "code": "280A",
+   "name": "ＴＭＨ",
+   "industry": "卸売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40189": {
+   "docID": "S100YYUS",
+   "code": "340A",
+   "name": "ジグザグ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40236": {
+   "docID": "S100YH46",
+   "code": "299A",
+   "name": "クラシル",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40354": {
+   "docID": "S100Y68H",
+   "code": "323A",
+   "name": "フライヤー",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40399": {
+   "docID": "S100YGDN",
+   "code": "330A",
+   "name": "ＴａｌｅｎｔＸ",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40400": {
+   "docID": "S100YKM2",
+   "code": "332A",
+   "name": "ミーク",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40420": {
+   "docID": "S100YHLO",
+   "code": "331A",
+   "name": "メディックス",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40505": {
+   "docID": "S100WXET",
+   "code": "350A",
+   "name": "デジタルグリッド",
+   "industry": "電気・ガス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40727": {
+   "docID": "S100YGHU",
+   "code": "416A",
+   "name": "富士ユナイトホールディングス",
+   "industry": "卸売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40736": {
+   "docID": "S100YC3L",
+   "code": "417A",
+   "name": "ブルーゾーンホールディングス",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40792": {
+   "docID": "S100XS80",
+   "code": "415A",
+   "name": "ＧＭＯ　ＴＥＣＨホールディングス",
+   "industry": "サービス業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40854": {
+   "docID": "S100YYOW",
+   "code": "464A",
+   "name": "ＱＰＳホールディングス",
+   "industry": "情報・通信業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E40879": {
+   "docID": "S100YYT8",
+   "code": "463A",
+   "name": "インテリックスホールディングス",
+   "industry": "不動産業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
   "E41130": {
    "docID": "S100YK16",
    "code": "543A",
    "name": "ＡＲＣＨＩＯＮ",
    "industry": "輸送用機器",
    "reason": "足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash"
+  },
+  "E42126": {
+   "docID": "S100Z0VF",
+   "code": "0000",
+   "name": "クラサスケミカル",
+   "industry": "化学",
+   "reason": "足りない項目: revenue, op, net_income, equity_ratio, cash"
   }
  }
 }
