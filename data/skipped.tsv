@@ -52,10 +52,71 @@
 4579	ラクオリア創薬	医薬品	足りない項目: revenue, revenue_prev
 4591	リボミック	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 4592	サンバイオ	医薬品	足りない項目: revenue, revenue_prev
+4594	ブライトパス・バイオ	医薬品	売上高が100万円未満（式で割れない）
 4598	ＤｅｌｔａーＦｌｙ　Ｐｈａｒｍａ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 4599	ステムリム	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 463A	インテリックスホールディングス	不動産業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 4642	オリジナル設計	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 464A	ＱＰＳホールディングス	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+472A	ミラティブ	情報・通信業	足りない項目: revenue_prev, op_prev
+4736	日本ラッド	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4819	デジタルガレージ	情報・通信業	足りない項目: revenue, revenue_prev, op, op_prev
+4880	セルソース	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+4881	ファンペップ	医薬品	足りない項目: revenue, revenue_prev
+4883	モダリス	医薬品	足りない項目: revenue, revenue_prev
+4889	レナサイエンス	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4891	㈱ティムス	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4893	ノイルイミューン・バイオテック	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4896	ケイファーマ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+4901	富士フイルムホールディングス	化学	足りない項目: op, op_prev
+5028	セカンドサイトアナリティカ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+504A	イノバセル	医薬品	足りない項目: revenue, revenue_prev, equity_ratio, equity_ratio_prev
+5129	ＦＩＸＥＲ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5131	リンカーズ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+520A	ジェイファーマ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+5252	日本ナレッジ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 543A	ＡＲＣＨＩＯＮ	輸送用機器	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
+5572	Ｒｉｄｇｅ－ｉ	情報・通信業	足りない項目: revenue_prev, op_prev
+5580	プロディライト	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5586	Ｌａｂｏｒｏ．ＡＩ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5587	インバウンドプラットフォーム	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5588	ファーストアカウンティング	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5713	住友金属鉱山	非鉄金属	足りない項目: op, op_prev
+5884	クラダシ	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5891	ＳＡＫＩＧＡＫＥホールディングス	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5900	ダイケン	金属製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+6177	ＡｐｐＢａｎｋ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+6178	日本郵政	サービス業	足りない項目: revenue, revenue_prev, op, op_prev
+6264	マルマエ	機械	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+6301	小松製作所	機械	足りない項目: op, op_prev
+6330	東洋エンジニアリング	建設業	足りない項目: revenue, revenue_prev
+6379	レイズネクスト	建設業	足りない項目: revenue, revenue_prev
+6501	日立製作所	電気機器	足りない項目: op, op_prev
+6563	みらいワークス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+6645	オムロン	電気機器	足りない項目: op, op_prev
+6696	トラース・オン・プロダクト	電気機器	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+6779	日本電波工業	電気機器	足りない項目: net_income
+6836	ぷらっとホーム	電気機器	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7011	三菱重工業	機械	足りない項目: op, op_prev
+7035	ａｎｄ　ｆａｃｔｏｒｙ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7063	Ｂｉｒｄｍａｎ	サービス業	足りない項目: equity_ratio_prev
+7074	トゥエンティーフォーセブンホールディングス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7076	名南Ｍ＆Ａ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7096	ステムセル研究所	医薬品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7357	ジオコード	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7360	オンデック	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7368	表示灯	サービス業	足りない項目: revenue, revenue_prev, op_prev, equity_ratio_prev
+7434	オータケ	卸売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7462	ＣＡＰＩＴＡ	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7545	西松屋チェーン	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7741	ＨＯＹＡ	精密機器	足りない項目: op, op_prev, net_income
+7751	キヤノン	電気機器	足りない項目: op, op_prev
+7804	ビーアンドピー	その他製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+8001	伊藤忠商事	卸売業	足りない項目: op, op_prev
+8002	丸紅	卸売業	足りない項目: op, op_prev
+8031	三井物産	卸売業	足りない項目: op, op_prev
+8032	日本紙パルプ商事	卸売業	足りない項目: revenue, revenue_prev
+8053	住友商事	卸売業	足りない項目: op, op_prev
+8058	三菱商事	卸売業	足りない項目: op, op_prev
+8113	ユニ・チャーム	化学	足りない項目: op, op_prev
 9984	ソフトバンクグループ	情報・通信業	足りない項目: op, op_prev
