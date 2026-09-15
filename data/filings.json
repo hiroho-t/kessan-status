@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-09-14",
+ "last_scanned": "2026-09-15",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -16694,10 +16694,10 @@
    "docDescription": "有価証券報告書－第24期(2025/04/01－2026/03/31)"
   },
   "E30501": {
-   "docID": "S100WO68",
-   "periodEnd": "2025-06-20",
-   "submitDateTime": "2025-09-16 11:06",
-   "docDescription": "有価証券報告書－第50期(2024/06/21－2025/06/20)"
+   "docID": "S100Z1T7",
+   "periodEnd": "2026-06-20",
+   "submitDateTime": "2026-09-15 15:00",
+   "docDescription": "有価証券報告書－第51期(2025/06/21－2026/06/20)"
   },
   "E30504": {
    "docID": "S100XN0D",
@@ -23316,6 +23316,13 @@
    "docID": "S100X7OR",
    "code": "3189",
    "name": "ＡＮＡＰホールディングス",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
+  },
+  "E30501": {
+   "docID": "S100Z1T7",
+   "code": "3191",
+   "name": "ジョイフル本田",
    "industry": "小売業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
