@@ -113,6 +113,7 @@
 7741	ＨＯＹＡ	精密機器	足りない項目: op, op_prev, net_income
 7751	キヤノン	電気機器	足りない項目: op, op_prev
 7804	ビーアンドピー	その他製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+7809	壽屋	その他製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 8001	伊藤忠商事	卸売業	足りない項目: op, op_prev
 8002	丸紅	卸売業	足りない項目: op, op_prev
 8031	三井物産	卸売業	足りない項目: op, op_prev
