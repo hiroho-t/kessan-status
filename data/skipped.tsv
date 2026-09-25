@@ -71,6 +71,7 @@
 4896	ケイファーマ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 4901	富士フイルムホールディングス	化学	足りない項目: op, op_prev
 5028	セカンドサイトアナリティカ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+5034	ｕｎｅｒｒｙ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 504A	イノバセル	医薬品	足りない項目: revenue, revenue_prev, equity_ratio, equity_ratio_prev
 5129	ＦＩＸＥＲ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5131	リンカーズ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
