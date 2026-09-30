@@ -84,7 +84,6 @@
 5587	インバウンドプラットフォーム	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5588	ファーストアカウンティング	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5713	住友金属鉱山	非鉄金属	足りない項目: op, op_prev
-5884	クラダシ	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5891	ＳＡＫＩＧＡＫＥホールディングス	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5900	ダイケン	金属製品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 6177	ＡｐｐＢａｎｋ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
@@ -101,7 +100,6 @@
 6836	ぷらっとホーム	電気機器	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7011	三菱重工業	機械	足りない項目: op, op_prev
 7035	ａｎｄ　ｆａｃｔｏｒｙ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
-7063	Ｂｉｒｄｍａｎ	サービス業	足りない項目: equity_ratio_prev
 7074	トゥエンティーフォーセブンホールディングス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7076	名南Ｍ＆Ａ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7096	ステムセル研究所	医薬品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
@@ -125,7 +123,6 @@
 8113	ユニ・チャーム	化学	足りない項目: op, op_prev
 8252	丸井グループ	小売業	足りない項目: revenue, revenue_prev
 8887	シーラホールディングス	不動産業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
-9162	ブリーチ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9204	スカイマーク	空運業	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 9214	Ｒｅｃｏｖｅｒｙ　Ｉｎｔｅｒｎａｔｉｏｎａｌ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9215	ＣａＳｙ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
