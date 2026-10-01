@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-09-30",
+ "last_scanned": "2026-10-01",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -4490,10 +4490,10 @@
    "docDescription": "有価証券報告書－第70期(2025/04/01－2026/03/31)"
   },
   "E01446": {
-   "docID": "S100WRVO",
-   "periodEnd": "2025-06-30",
-   "submitDateTime": "2025-09-29 09:24",
-   "docDescription": "有価証券報告書－第74期(2024/07/01－2025/06/30)"
+   "docID": "S100Z50O",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 09:28",
+   "docDescription": "有価証券報告書－第75期(2025/07/01－2026/06/30)"
   },
   "E01448": {
    "docID": "S100YGWS",
@@ -6248,10 +6248,10 @@
    "docDescription": "有価証券報告書－第73期(2025/04/01－2026/03/31)"
   },
   "E01975": {
-   "docID": "S100WRH7",
-   "periodEnd": "2025-03-31",
-   "submitDateTime": "2025-09-26 16:44",
-   "docDescription": "有価証券報告書－第52期(2024/04/01－2025/03/31)"
+   "docID": "S100Z5CA",
+   "periodEnd": "2026-03-31",
+   "submitDateTime": "2026-09-30 15:50",
+   "docDescription": "有価証券報告書－第53期(2025/04/01－2026/03/31)"
   },
   "E01977": {
    "docID": "S100YKH4",
@@ -6384,6 +6384,12 @@
    "periodEnd": "2026-03-31",
    "submitDateTime": "2026-06-29 15:44",
    "docDescription": "有価証券報告書－第54期(2025/04/01－2026/03/31)"
+  },
+  "E02009": {
+   "docID": "S100Z57M",
+   "periodEnd": "2026-03-31",
+   "submitDateTime": "2026-09-30 15:12",
+   "docDescription": "有価証券報告書－第60期(2025/04/01－2026/03/31)"
   },
   "E02011": {
    "docID": "S100YSCT",
@@ -12080,10 +12086,10 @@
    "docDescription": "有価証券報告書－第104期(2025/04/01－2026/03/31)"
   },
   "E04230": {
-   "docID": "S100WRNH",
-   "periodEnd": "2025-06-30",
-   "submitDateTime": "2025-09-29 09:45",
-   "docDescription": "有価証券報告書－第79期(2024/07/01－2025/06/30)"
+   "docID": "S100Z5AL",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 11:36",
+   "docDescription": "有価証券報告書－第80期(2025/07/01－2026/06/30)"
   },
   "E04232": {
    "docID": "S100YHHR",
@@ -12344,10 +12350,10 @@
    "docDescription": "有価証券報告書－第79期(2025/04/01－2026/03/31)"
   },
   "E04339": {
-   "docID": "S100WQSP",
-   "periodEnd": "2025-06-30",
-   "submitDateTime": "2025-09-26 10:28",
-   "docDescription": "有価証券報告書－第108期(2024/07/01－2025/06/30)"
+   "docID": "S100Z59R",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 11:03",
+   "docDescription": "有価証券報告書－第109期(2025/07/01－2026/06/30)"
   },
   "E04341": {
    "docID": "S100YGFS",
@@ -13940,10 +13946,10 @@
    "docDescription": "有価証券報告書－第34期(2025/02/01－2026/01/31)"
   },
   "E05255": {
-   "docID": "S100WRPN",
-   "periodEnd": "2025-06-30",
-   "submitDateTime": "2025-09-26 15:37",
-   "docDescription": "有価証券報告書－第29期(2024/07/01－2025/06/30)"
+   "docID": "S100Z571",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 15:35",
+   "docDescription": "有価証券報告書－第30期(2025/07/01－2026/06/30)"
   },
   "E05262": {
    "docID": "S100YFFX",
@@ -20348,10 +20354,10 @@
    "docDescription": "有価証券報告書－第26期(2024/10/01－2025/09/30)"
   },
   "E36539": {
-   "docID": "S100WQ3S",
-   "periodEnd": "2025-06-30",
-   "submitDateTime": "2025-09-25 16:02",
-   "docDescription": "有価証券報告書－第4期(2024/07/01－2025/06/30)"
+   "docID": "S100Z4Q1",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 16:31",
+   "docDescription": "有価証券報告書－第5期(2025/07/01－2026/06/30)"
   },
   "E36545": {
    "docID": "S100Y7JM",
@@ -20400,6 +20406,12 @@
    "periodEnd": "2025-08-31",
    "submitDateTime": "2025-11-28 14:19",
    "docDescription": "有価証券報告書－第17期(2024/09/01－2025/08/31)"
+  },
+  "E36653": {
+   "docID": "S100Z5HJ",
+   "periodEnd": "2026-03-31",
+   "submitDateTime": "2026-09-30 16:48",
+   "docDescription": "有価証券報告書－第20期(2025/04/01－2026/03/31)"
   },
   "E36655": {
    "docID": "S100XC7N",
@@ -22561,6 +22573,12 @@
    "submitDateTime": "2026-06-25 15:31",
    "docDescription": "有価証券報告書－第8期(2025/04/01－2026/03/31)"
   },
+  "E40405": {
+   "docID": "S100Z55N",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 12:00",
+   "docDescription": "有価証券報告書－第7期(2025/07/01－2026/06/30)"
+  },
   "E40408": {
    "docID": "S100YG2V",
    "periodEnd": "2026-03-31",
@@ -22979,6 +22997,12 @@
    "docID": "S100Z3UE",
    "periodEnd": "2026-06-30",
    "submitDateTime": "2026-09-25 15:30",
+   "docDescription": "有価証券報告書－第11期(2025/07/01－2026/06/30)"
+  },
+  "E41973": {
+   "docID": "S100Z5DN",
+   "periodEnd": "2026-06-30",
+   "submitDateTime": "2026-09-30 14:24",
    "docDescription": "有価証券報告書－第11期(2025/07/01－2026/06/30)"
   },
   "E42126": {
