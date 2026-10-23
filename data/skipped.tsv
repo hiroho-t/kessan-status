@@ -78,7 +78,6 @@
 520A	ジェイファーマ	医薬品	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
 5252	日本ナレッジ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 543A	ＡＲＣＨＩＯＮ	輸送用機器	足りない項目: revenue, revenue_prev, op, op_prev, net_income, equity_ratio, equity_ratio_prev, cash
-5572	Ｒｉｄｇｅ－ｉ	情報・通信業	足りない項目: revenue_prev, op_prev
 5580	プロディライト	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5586	Ｌａｂｏｒｏ．ＡＩ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 5587	インバウンドプラットフォーム	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
