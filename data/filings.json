@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-10-28",
+ "last_scanned": "2026-10-29",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -2090,10 +2090,10 @@
    "docDescription": "有価証券報告書－第71期(2025/04/01－2026/03/31)"
   },
   "E00735": {
-   "docID": "S100WXH6",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-29 16:33",
-   "docDescription": "有価証券報告書－第54期(2024/08/01－2025/07/31)"
+   "docID": "S100ZAAO",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 16:00",
+   "docDescription": "有価証券報告書－第55期(2025/08/01－2026/07/31)"
   },
   "E00736": {
    "docID": "S100XSPB",
@@ -6716,10 +6716,10 @@
    "docDescription": "有価証券報告書－第19期(2025/01/01－2025/12/31)"
   },
   "E02121": {
-   "docID": "S100WWVN",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-27 11:51",
-   "docDescription": "有価証券報告書－第67期(2024/08/01－2025/07/31)"
+   "docID": "S100ZA1D",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 15:30",
+   "docDescription": "有価証券報告書－第68期(2025/08/01－2026/07/31)"
   },
   "E02123": {
    "docID": "S100YKIO",
@@ -15109,6 +15109,12 @@
    "submitDateTime": "2026-06-23 15:40",
    "docDescription": "有価証券報告書－第63期(2025/04/01－2026/03/31)"
   },
+  "E05680": {
+   "docID": "S100ZAC4",
+   "periodEnd": "2026-04-30",
+   "submitDateTime": "2026-10-28 15:35",
+   "docDescription": "有価証券報告書－第26期(2025/05/01－2026/04/30)"
+  },
   "E05682": {
    "docID": "S100YJ02",
    "periodEnd": "2026-03-31",
@@ -18662,10 +18668,10 @@
    "docDescription": "有価証券報告書－第20期(2025/04/01－2026/03/31)"
   },
   "E33910": {
-   "docID": "S100WX6F",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-28 15:30",
-   "docDescription": "有価証券報告書－第37期(2024/08/01－2025/07/31)"
+   "docID": "S100ZA5W",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 15:30",
+   "docDescription": "有価証券報告書－第38期(2025/08/01－2026/07/31)"
   },
   "E33928": {
    "docID": "S100Y78X",
@@ -18674,10 +18680,10 @@
    "docDescription": "有価証券報告書－第16期(2025/03/01－2026/02/28)"
   },
   "E33948": {
-   "docID": "S100WW3R",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-27 13:13",
-   "docDescription": "有価証券報告書－第20期(2024/08/01－2025/07/31)"
+   "docID": "S100Z940",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 13:14",
+   "docDescription": "有価証券報告書－第21期(2025/08/01－2026/07/31)"
   },
   "E33957": {
    "docID": "S100Y628",
@@ -19268,10 +19274,10 @@
    "docDescription": "有価証券報告書－第21期(2025/04/01－2026/03/31)"
   },
   "E34853": {
-   "docID": "S100WXDJ",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-29 15:51",
-   "docDescription": "有価証券報告書－第12期(2024/08/01－2025/07/31)"
+   "docID": "S100ZA5J",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 17:00",
+   "docDescription": "有価証券報告書－第13期(2025/08/01－2026/07/31)"
   },
   "E34866": {
    "docID": "S100XVTU",
@@ -20504,10 +20510,10 @@
    "docDescription": "有価証券報告書－第9期(2025/01/01－2025/12/31)"
   },
   "E36711": {
-   "docID": "S100WXTF",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-30 16:16",
-   "docDescription": "有価証券報告書－第23期(2024/08/01－2025/07/31)"
+   "docID": "S100ZAJ1",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 16:12",
+   "docDescription": "有価証券報告書－第24期(2025/08/01－2026/07/31)"
   },
   "E36714": {
    "docID": "S100YK3E",
@@ -21260,10 +21266,10 @@
    "docDescription": "有価証券報告書－第35期(2024/10/01－2025/09/30)"
   },
   "E37848": {
-   "docID": "S100WWW2",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-28 15:44",
-   "docDescription": "有価証券報告書－第19期(2024/08/01－2025/07/31)"
+   "docID": "S100Z9TW",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 15:39",
+   "docDescription": "有価証券報告書－第20期(2025/08/01－2026/07/31)"
   },
   "E37902": {
    "docID": "S100XSJZ",
@@ -22334,10 +22340,10 @@
    "docDescription": "有価証券報告書－第2期(2025/04/01－2026/03/31)"
   },
   "E39788": {
-   "docID": "S100WY33",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-31 15:35",
-   "docDescription": "有価証券報告書－第9期(2024/08/01－2025/07/31)"
+   "docID": "S100ZAH4",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 15:57",
+   "docDescription": "有価証券報告書－第10期(2025/08/01－2026/07/31)"
   },
   "E39812": {
    "docID": "S100YSCR",
@@ -22646,10 +22652,10 @@
    "docDescription": "有価証券報告書－第7期(2025/06/01－2026/05/31)"
   },
   "E40505": {
-   "docID": "S100WXET",
-   "periodEnd": "2025-07-31",
-   "submitDateTime": "2025-10-30 15:41",
-   "docDescription": "有価証券報告書－第9期(2024/08/01－2025/07/31)"
+   "docID": "S100ZAEK",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-28 16:41",
+   "docDescription": "有価証券報告書－第10期(2025/08/01－2026/07/31)"
   },
   "E40512": {
    "docID": "S100XU0T",
@@ -23838,13 +23844,6 @@
    "industry": "建設業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
-  "E39788": {
-   "docID": "S100WY33",
-   "code": "218A",
-   "name": "Ｌｉｂｅｒａｗａｒｅ",
-   "industry": "情報・通信業",
-   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
-  },
   "E40175": {
    "docID": "S100XNNH",
    "code": "280A",
@@ -23892,13 +23891,6 @@
    "code": "331A",
    "name": "メディックス",
    "industry": "サービス業",
-   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
-  },
-  "E40505": {
-   "docID": "S100WXET",
-   "code": "350A",
-   "name": "デジタルグリッド",
-   "industry": "電気・ガス業",
    "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E40727": {

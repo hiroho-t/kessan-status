@@ -9,7 +9,6 @@
 1952	新日本空調	建設業	足りない項目: revenue, revenue_prev
 2156	セーラー広告	サービス業	足りない項目: revenue, revenue_prev
 2163	アルトナー	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
-218A	Ｌｉｂｅｒａｗａｒｅ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 2216	カンロ	食料品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 2266	六甲バター	食料品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 2282	日本ハム	食料品	足りない項目: op, op_prev
@@ -31,7 +30,6 @@
 332A	ミーク	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 3358	Ｔｒａｉｌｈｅａｄ　Ｇｌｏｂａｌ　Ｈｏｌｄｉｎｇｓ	小売業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 340A	ジグザグ	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
-350A	デジタルグリッド	電気・ガス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 3624	アクセルマーク	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 366A	ウェルネス・コミュニケーションズ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 4014	カラダノート	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
