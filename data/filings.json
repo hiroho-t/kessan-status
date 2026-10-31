@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-10-30",
+ "last_scanned": "2026-10-31",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -23010,6 +23010,12 @@
    "periodEnd": "2026-06-30",
    "submitDateTime": "2026-09-25 15:30",
    "docDescription": "有価証券報告書－第11期(2025/07/01－2026/06/30)"
+  },
+  "E41918": {
+   "docID": "S100ZAWS",
+   "periodEnd": "2026-07-31",
+   "submitDateTime": "2026-10-30 10:13",
+   "docDescription": "有価証券報告書－第36期(2025/08/01－2026/07/31)"
   },
   "E41973": {
    "docID": "S100Z5DN",
