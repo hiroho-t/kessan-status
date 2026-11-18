@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-11-17",
+ "last_scanned": "2026-11-18",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -650,10 +650,10 @@
    "docDescription": "有価証券報告書－第58期(2025/04/01－2026/03/31)"
   },
   "E00246": {
-   "docID": "S100X59V",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-19 10:34",
-   "docDescription": "有価証券報告書－第72期(2024/09/01－2025/08/31)"
+   "docID": "S100ZII1",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-18 11:30",
+   "docDescription": "有価証券報告書－第73期(2025/09/01－2026/08/31)"
   },
   "E00248": {
    "docID": "S100YZ8R",
@@ -15926,10 +15926,10 @@
    "docDescription": "有価証券報告書－第70期(2025/04/01－2026/03/31)"
   },
   "E25443": {
-   "docID": "S100X5OB",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-20 15:34",
-   "docDescription": "有価証券報告書－第40期(2024/09/01－2025/08/31)"
+   "docID": "S100ZIF8",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-18 11:22",
+   "docDescription": "有価証券報告書－第41期(2025/09/01－2026/08/31)"
   },
   "E25551": {
    "docID": "S100Y6XK",
