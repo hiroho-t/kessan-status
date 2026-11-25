@@ -95,7 +95,6 @@
 6779	日本電波工業	電気機器	足りない項目: net_income
 6836	ぷらっとホーム	電気機器	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7011	三菱重工業	機械	足りない項目: op, op_prev
-7035	ａｎｄ　ｆａｃｔｏｒｙ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7074	トゥエンティーフォーセブンホールディングス	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7076	名南Ｍ＆Ａ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 7096	ステムセル研究所	医薬品	足りない項目: revenue_prev, op_prev, equity_ratio_prev
@@ -129,6 +128,7 @@
 9419	ワイヤレスゲート	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9423	フォーバル・リアルストレート	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9467	アルファポリス	情報・通信業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
+9560	プログリット	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9561	グラッドキューブ	サービス業	足りない項目: revenue_prev, op_prev, equity_ratio_prev
 9946	ミニストップ	小売業	足りない項目: revenue, revenue_prev
 9984	ソフトバンクグループ	情報・通信業	足りない項目: op, op_prev
