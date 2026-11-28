@@ -1,5 +1,5 @@
 {
- "last_scanned": "2026-11-27",
+ "last_scanned": "2026-11-28",
  "reports": {
   "E00004": {
    "docID": "S100YYEO",
@@ -9914,10 +9914,10 @@
    "docDescription": "有価証券報告書－第67期(2025/03/01－2026/02/28)"
   },
   "E03217": {
-   "docID": "S100X6X6",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-28 13:04",
-   "docDescription": "有価証券報告書－第64期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKET",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 13:00",
+   "docDescription": "有価証券報告書－第65期(2025/09/01－2026/08/31)"
   },
   "E03219": {
    "docID": "S100Y3VC",
@@ -11348,10 +11348,10 @@
    "docDescription": "有価証券報告書－第21期(2025/04/01－2026/03/31)"
   },
   "E03740": {
-   "docID": "S100X79I",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-27 16:34",
-   "docDescription": "有価証券報告書－第25期(2025/04/01－2025/08/31)"
+   "docID": "S100ZKP1",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 16:00",
+   "docDescription": "有価証券報告書－第26期(2025/09/01－2026/08/31)"
   },
   "E03745": {
    "docID": "S100YNIS",
@@ -14354,10 +14354,10 @@
    "docDescription": "有価証券報告書－第35期(2025/01/01－2025/12/31)"
   },
   "E05409": {
-   "docID": "S100X7IQ",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-28 14:23",
-   "docDescription": "有価証券報告書－第27期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKNN",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 15:21",
+   "docDescription": "有価証券報告書－第28期(2025/09/01－2026/08/31)"
   },
   "E05410": {
    "docID": "S100YHXU",
@@ -18122,10 +18122,10 @@
    "docDescription": "有価証券報告書－第13期(2025/04/01－2026/03/31)"
   },
   "E32991": {
-   "docID": "S100X6M7",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-28 15:30",
-   "docDescription": "有価証券報告書－第47期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKDF",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 15:30",
+   "docDescription": "有価証券報告書－第48期(2025/09/01－2026/08/31)"
   },
   "E32992": {
    "docID": "S100XUQE",
@@ -19886,10 +19886,10 @@
    "docDescription": "有価証券報告書－第13期(2025/09/01－2026/08/31)"
   },
   "E35773": {
-   "docID": "S100X6Y8",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-27 15:32",
-   "docDescription": "有価証券報告書－第14期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKDJ",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 15:31",
+   "docDescription": "有価証券報告書－第15期(2025/09/01－2026/08/31)"
   },
   "E35790": {
    "docID": "S100XSRQ",
@@ -20420,10 +20420,10 @@
    "docDescription": "有価証券報告書－第20期(2025/06/01－2026/05/31)"
   },
   "E36648": {
-   "docID": "S100X7DA",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-28 14:19",
-   "docDescription": "有価証券報告書－第17期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKN1",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 15:14",
+   "docDescription": "有価証券報告書－第18期(2025/09/01－2026/08/31)"
   },
   "E36653": {
    "docID": "S100Z5HJ",
@@ -22394,10 +22394,10 @@
    "docDescription": "有価証券報告書－第28期(2024/10/01－2025/09/30)"
   },
   "E39928": {
-   "docID": "S100X72L",
-   "periodEnd": "2025-08-31",
-   "submitDateTime": "2025-11-27 15:00",
-   "docDescription": "有価証券報告書－第17期(2024/09/01－2025/08/31)"
+   "docID": "S100ZKAG",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 14:50",
+   "docDescription": "有価証券報告書－第18期(2025/09/01－2026/08/31)"
   },
   "E39936": {
    "docID": "S100Z433",
@@ -23011,6 +23011,12 @@
    "submitDateTime": "2026-08-28 17:00",
    "docDescription": "有価証券報告書－第50期(2025/06/01－2026/05/31)"
   },
+  "E41847": {
+   "docID": "S100ZITA",
+   "periodEnd": "2026-08-31",
+   "submitDateTime": "2026-11-27 15:30",
+   "docDescription": "有価証券報告書－第16期(2025/09/01－2026/08/31)"
+  },
   "E41917": {
    "docID": "S100Z3UE",
    "periodEnd": "2026-06-30",
@@ -23455,6 +23461,13 @@
    "name": "ファンペップ",
    "industry": "医薬品",
    "reason": "足りない項目: revenue, revenue_prev"
+  },
+  "E32991": {
+   "docID": "S100ZKDF",
+   "code": "3560",
+   "name": "ほぼ日",
+   "industry": "小売業",
+   "reason": "足りない項目: revenue_prev, op_prev, equity_ratio_prev"
   },
   "E33323": {
    "docID": "S100Y0AL",
